@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="theme-color" content="#4302b2">
 	<!--website-favicon-->
-	<link href="{{ asset('FrontEnd/images/logo.svg') }}" rel="icon">
+	<link href="{{ asset('Frontend/images/logo.svg') }}" rel="icon">
 	<!--plugin-css-->
 	<link href="{{ asset('FrontEnd/css/bootstrap.min.css') }}" rel="stylesheet">
 	<link href="{{ asset('FrontEnd/css/plugin.min.css') }}" rel="stylesheet">
@@ -26,7 +26,7 @@
 <!--Start Preloader -->
  {{-- <div class="onloadpage" id="page_loader">
 	<div class="pre-content">
-	   <div class="logo-pre"><img src="{{ asset('FrontEnd/images/logo.png') }}" alt="Logo" class="img-fluid" /></div>
+	   <div class="logo-pre"><img src="{{ asset('FrontEnd/{{ asset('Frontend/images/logo.png') }}" alt="Logo" class="img-fluid" /></div>
 	   <div class="pre-text- text-radius text-light text-animation bg-b">ClickWeb - Creative Agency & Portfolio</div>
 	</div>
  </div> --}}
@@ -37,8 +37,8 @@
 	<div class="container-fluid m-pad">
 		<div class="menu-header">
 		   <div class="dsk-logo"><a class="nav-brand" href="./">
-			  <img src="{{ asset('FrontEnd/images/logo.svg') }}" alt="Logo" class="mega-white-logo"/>
-			  <img src="{{ asset('FrontEnd/images/logo.svg') }}" alt="Logo" class="mega-darks-logo"/>
+			  <img src="{{ asset('Frontend/images/logo.svg') }}" alt="Logo" class="mega-white-logo"/>
+			  <img src="{{ asset('Frontend/images/logo.svg') }}" alt="Logo" class="mega-darks-logo"/>
 			  </a>
 		   </div>
 		   <div class="custom-nav" role="navigation">
@@ -198,25 +198,25 @@
 	  <h4>Get In Touch</h4>
 	  <p class="mt10">Please fill out the form below if you have a plan or project in mind that you'd like to share with us.</p>
 	  <div class="media mt15">
-		<div class="icondive"><img src="images/icons/call.svg" alt="icon"></div>
+		<div class="icondive"><img src="{{ asset('Frontend/images/icons/call.svg') }}" alt="icon"></div>
 		<div class="media-body getintouchinfo">
 		  <a href="tel:123456790">+91-123 4567 890 <span>Mon-Fri 9am - 6pm</span></a>
 		</div>
 	  </div>
 	  <div class="media mt15">
-		<div class="icondive"><img src="images/icons/whatsapp.svg" alt="icon"></div>
+		<div class="icondive"><img src="{{ asset('Frontend/images/icons/whatsapp.svg') }}" alt="icon"></div>
 		<div class="media-body getintouchinfo">
 		  <a href="tel:123456790">+91-123 4567 890 <span>Mon-Fri 9am - 6pm</span></a>
 		</div>
 	  </div>
 	  <div class="media mt15">
-		<div class="icondive"><img src="images/icons/mail.svg" alt="icon"></div>
+		<div class="icondive"><img src="{{ asset('Frontend/images/icons/mail.svg') }}" alt="icon"></div>
 		<div class="media-body getintouchinfo">
 		  <a href="mailto:info@website.com">info@website.com <span>Online Support</span></a>
 		</div>
 	  </div>
 	  <div class="media mt15">
-		<div class="icondive"><img src="images/icons/map.svg" alt="icon"></div>
+		<div class="icondive"><img src="{{ asset('Frontend/images/icons/map.svg') }}" alt="icon"></div>
 		<div class="media-body getintouchinfo">
 		  <a href="mailto:info@website.com">Jaipur, Rajasthan, India<span>Visit Our Office</span></a>
 		</div>
@@ -269,8 +269,8 @@
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-lg-3 col-sm-6  ftr-brand-pp">
-                 <a class="navbar-brand mt30 mb25 f-dark-logo" href="#"> <img src="images/logo.png" alt="Logo"/></a>
-                 <a class="navbar-brand mt30 mb25 f-white-logo" href="#"> <img src="images/white-logo.png" alt="Logo" /></a>
+                 <a class="navbar-brand mt30 mb25 f-dark-logo" href="#"> <img src="{{ asset('Frontend/images/logo.png') }}" alt="Logo"/></a>
+                 <a class="navbar-brand mt30 mb25 f-white-logo" href="#"> <img src="{{ asset('Frontend/images/white-logo.png') }}" alt="Logo" /></a>
                  <p>News letter dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Enter your email</p>
                  <a href="#" class="btn-main bg-btn3 lnk mt20">Become Partner <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
             </div>
@@ -305,14 +305,14 @@
                 <div class="col-lg-4 col-sm-6 footer-blog-">
                     <h5>Latest Blogs</h5>
                     <div class="single-blog-">
-                        <div class="post-thumb"><a href="#"><img src="images/blog/blog-small.jpg" alt="blog"></a></div>
+                        <div class="post-thumb"><a href="#"><img src="{{ asset('Frontend/images/blog/blog-small.jpg') }}" alt="blog"></a></div>
                         <div class="content">
                             <p class="post-meta"><span class="post-date"><i class="far fa-clock"></i>April 15, 2020</span></p>
                             <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
                         </div>
                     </div>
                     <div class="single-blog-">
-                        <div class="post-thumb"><a href="#"><img src="images/blog/blog-small.jpg" alt="blog"></a></div>
+                        <div class="post-thumb"><a href="#"><img src="{{ asset('Frontend/images/blog/blog-small.jpg') }}" alt="blog"></a></div>
                         <div class="content">
                             <p class="post-meta"><span class="post-date"><i class="far fa-clock"></i>April 15, 2020</span></p>
                             <h4 class="title"><a href="blog-sngle.html">We Provide you Best &amp; Creative Consulting Service</a></h4>
@@ -331,10 +331,10 @@
                 </div>
                 <div class="col-lg-8 v-center">
                     <ul class="footer-badges-">
-                        <li><a href="#"><img src="images/about/badges-a.png" alt="badges"></a></li>
-                        <li><a href="#"><img src="images/about/badges-b.png" alt="badges"></a></li>
-                        <li><a href="#"><img src="images/about/badges-c.png" alt="badges"></a></li>
-                        <li><a href="#"><img src="images/about/badges-d.png" alt="badges"></a></li>
+                        <li><a href="#"><img src="{{ asset('Frontend/images/about/badges-a.png') }}" alt="badges"></a></li>
+                        <li><a href="#"><img src="{{ asset('Frontend/images/about/badges-b.png') }}" alt="badges"></a></li>
+                        <li><a href="#"><img src="{{ asset('Frontend/images/about/badges-c.png') }}" alt="badges"></a></li>
+                        <li><a href="#"><img src="{{ asset('Frontend/images/about/badges-d.png') }}" alt="badges"></a></li>
                     </ul>
                 </div>
             </div>
@@ -404,7 +404,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1"> --}}
     <!-- Place favicon.ico in the root directory -->
-    {{-- <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/icon.png"> --}}
+    {{-- <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/icon.png') }}"> --}}
     <!-- CSS here -->
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/vendor/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/animate.min.css') }}">
@@ -450,7 +450,7 @@
                         <div class="offcanvas__logo">
                             <a href="/">
                                 <img src="assets/imgs/logo/logo.svg" alt="logo not found"> --}}
-                                {{-- <img src="assets/imgs/logoo.png" alt="logo not found"> --}}
+                                {{-- <img src="assets/imgs/logoo.png') }}" alt="logo not found"> --}}
                             {{-- </a>
                         </div>
                         <div class="offcanvas__close">
@@ -502,7 +502,7 @@
                             <div class="header__logo">
                                 <a href="/"> --}}
                                     {{-- <img class="logo__white" src="assets/imgs/logo/logo.svg" alt="logo not found"> --}}
-                                    {{-- <img src="assets/imgs/logoo.png" alt="logo not found">
+                                    {{-- <img src="assets/imgs/logoo.png') }}" alt="logo not found">
                                 </a>
                             </div>
                         </div>
@@ -589,7 +589,7 @@
                     <a href="/">
                         <h5 class="text-uppercase">@ Social Media</h5> --}}
                         {{-- <img src="assets/imgs/logo/logo.svg" alt="logo not found"> --}}
-                        {{-- <img src="assets/imgs/logoo.png" alt="logo not found"> --}}
+                        {{-- <img src="assets/imgs/logoo.png') }}" alt="logo not found"> --}}
                     {{-- </a>
                 </div>
                 <div class="footer__content">
@@ -718,7 +718,7 @@
 <script src="{{ asset('assets/js/plugins/wow.js') }}"></script>
 <script src="{{ asset('assets/js/vendor/magnific-popup.min.js') }}"></script>
 <script src="{{ asset('assets/js/vendor/isotope.pkgd.min.js') }}"></script>
-<script src="{{ asset('assets/js/vendor/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ asset('assets/js/vendor/{{ asset('Frontend/imagesloaded.pkgd.min.js') }}"></script>
 <script src="{{ asset('assets/js/vendor/vanilla.tilt.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/counterup.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/nice-select.min.js') }}"></script>

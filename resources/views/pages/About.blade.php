@@ -9,7 +9,7 @@
                 <div class="bread-menu">
                   <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="/">About Us</a></li>
                   </ul>
                 </div>
                 <div class="bread-title">
@@ -21,8 +21,8 @@
             </div>
             <div class="col-lg-7 v-center">
               <div class="img-design h-scl-">
-                <div class="imgac "> <img src="images/banner/office-view-2.jpg" alt="creative agnecy html template" class="ag-dg1 img-fluid h-scl-base"></div>
-                <div class="imgac h-scl-base"><img src="images/banner/office-view-1.jpg" alt="creative agnecy html template" class="ag-dg2 img-fluid "></div>
+                <div class="imgac "> <img src="{{ asset('Frontend/images/banner/office-view-2.jpg') }}" alt="creative agnecy html template" class="ag-dg1 img-fluid h-scl-base"></div>
+                <div class="imgac h-scl-base"><img src="{{ asset('Frontend/images/banner/office-view-1.jpg') }}" alt="creative agnecy html template" class="ag-dg2 img-fluid "></div>
               </div>
             </div>
           </div>
@@ -36,7 +36,7 @@
         <div class="row">
           <div class="col-lg-5 v-center">
             <div class="image-block upset bg-shape wow fadeIn">
-              <img src="images/about/cheerful-businessman.jpg" alt="about us Niwax" class="img-fluid"/>
+              <img src="{{ asset('Frontend/images/about/cheerful-businessman.jpg') }}" alt="about us Niwax" class="img-fluid"/>
             </div>
           </div>
           <div class="col-lg-7">
@@ -68,14 +68,14 @@
         <div class="row mt30">
           <div class="col-lg-6 col-sm-12 mt30">
             <div class="s-block2">
-              <div class="card-icon"><img src="images/icons/vision.png" alt="icon" class="w80 mb20"></div>
+              <div class="card-icon"><img src="{{ asset('Frontend/images/icons/vision.png') }}" alt="icon" class="w80 mb20"></div>
               <h3>Our Vision</h3>
               <p class="mt15">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
           <div class="col-lg-6 col-sm-12 mt30">
             <div class="s-block2">
-              <div class="card-icon"><img src="images/icons/mountain.png" alt="icon" class="w80 mb20"></div>
+              <div class="card-icon"><img src="{{ asset('Frontend/images/icons/mountain.png') }}" alt="icon" class="w80 mb20"></div>
               <h3>Our Mission</h3>
               <p class="mt15">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
@@ -100,7 +100,7 @@
         <div class="row justify-content-center niwaxgap40">
           <div class="col-lg-5 v-center order1">
             <div class="image-block">
-              <img src="images/about/leadership.jpg" alt="about us Niwax" class="img-fluid"/>
+              <img src="{{ asset('Frontend/images/about/leadership.jpg') }}" alt="about us Niwax" class="img-fluid"/>
             </div>
           </div>
 
@@ -124,7 +124,7 @@
 
           <div class="col-lg-5 v-center order1">
             <div class="image-block">
-              <img src="images/about/collaboration.jpg" alt="about us Niwax" class="img-fluid"/>
+              <img src="{{ asset('Frontend/images/about/collaboration.jpg') }}" alt="about us Niwax" class="img-fluid"/>
             </div>
           </div>
           </div>
@@ -133,7 +133,7 @@
 
           <div class="col-lg-5 v-center order1">
             <div class="image-block">
-              <img src="images/about/transparency.jpg" alt="about us Niwax" class="img-fluid"/>
+              <img src="{{ asset('Frontend/images/about/transparency.jpg') }}" alt="about us Niwax" class="img-fluid"/>
             </div>
           </div>
 
@@ -163,28 +163,28 @@
         <div class="row upset">
           <div class="col-lg-3 col-sm-6 mt30">
             <div class="s-block up-hor">
-              <div class="s-card-icon"><img src="images/icons/research.svg" alt="service" class="img-fluid"/></div>
+              <div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/research.svg') }}" alt="service" class="img-fluid"/></div>
               <h4>Reasearch and Analysis</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 mt30">
             <div class="s-block up-hor">
-              <div class="s-card-icon"><img src="images/icons/chat.svg" alt="service" class="img-fluid"/></div>
+              <div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/chat.svg') }}" alt="service" class="img-fluid"/></div>
               <h4>Negotiation and power</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 mt30">
             <div class="s-block up-hor">
-              <div class="s-card-icon"><img src="images/icons/monitor.svg" alt="service" class="img-fluid"/></div>
+              <div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/monitor.svg') }}" alt="service" class="img-fluid"/></div>
               <h4>Creative and innovative solutions</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6 mt30">
             <div class="s-block up-hor">
-              <div class="s-card-icon"><img src="images/icons/trasparency.svg" alt="service" class="img-fluid"/></div>
+              <div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/trasparency.svg') }}" alt="service" class="img-fluid"/></div>
               <h4>Trasparency and ease of work</h4>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
             </div>
@@ -251,8 +251,8 @@
                 <h4>5K Happy Clients</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                 <div class="thumbs">
-                  <img class="img-fluid rounded" src="images/user-thumb/girl.jpg" alt="Niwax">
-                  <img class="img-fluid rounded" src="images/user-thumb/girl2.jpg" alt="Niwax">
+                  <img class="img-fluid rounded" src="{{ asset('Frontend/images/user-thumb/girl.jpg') }}" alt="Niwax">
+                  <img class="img-fluid rounded" src="{{ asset('Frontend/images/user-thumb/girl2.jpg') }}" alt="Niwax">
                 </div>
               </div>
             </div>
@@ -264,8 +264,8 @@
                 <h4>Academy Sward for Best Company</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                 <div class="thumbs">
-                  <img class="img-fluid rounded" src="images/icons/badge.svg" alt="Niwax">
-                  <img class="img-fluid rounded" src="images/icons/badge.svg" alt="Niwax">
+                  <img class="img-fluid rounded" src="{{ asset('Frontend/images/icons/badge.svg') }}" alt="Niwax">
+                  <img class="img-fluid rounded" src="{{ asset('Frontend/images/icons/badge.svg') }}" alt="Niwax">
                 </div>
               </div>
             </div>
@@ -286,8 +286,8 @@
                 <h4>5K Happy Clients</h4>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
                 <div class="thumbs">
-                  <img class="img-fluid rounded" src="images/user-thumb/girl.jpg" alt="Niwax">
-                  <img class="img-fluid rounded" src="images/user-thumb/girl2.jpg" alt="Niwax">
+                  <img class="img-fluid rounded" src="{{ asset('Frontend/images/user-thumb/girl.jpg') }}" alt="Niwax">
+                  <img class="img-fluid rounded" src="{{ asset('Frontend/images/user-thumb/girl2.jpg') }}" alt="Niwax">
                 </div>
               </div>
             </div>
@@ -312,7 +312,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-4 col-md-4">
               <div class="image-block upset h-scl-">
-                <div class="image-div h-scl-base"><img src="images/team/team-single.jpg" alt="team" class="img-fluid"/></div>
+                <div class="image-div h-scl-base"><img src="{{ asset('Frontend/images/team/team-single.jpg') }}" alt="team" class="img-fluid"/></div>
               </div>
             </div>
             <div class="col-lg-5 col-md-5">
@@ -337,7 +337,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-4 col-md-4">
               <div class="image-block upset">
-                <div class="image-div"><a href="#"><img src="images/team/team-single.jpg" alt="team" class="img-fluid"/></a></div>
+                <div class="image-div"><a href="#"><img src="{{ asset('Frontend/images/team/team-single.jpg') }}" alt="team" class="img-fluid"/></a></div>
               </div>
             </div>
             <div class="col-lg-5 col-md-5">
@@ -364,16 +364,16 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-5 mt30 h-scl-">
-                <div class="img-ca2set h-scl-base"><img src="images/about/office-1.jpg" alt="companyname" class="img-fluid w-100"></div>
+                <div class="img-ca2set h-scl-base"><img src="{{ asset('Frontend/images/about/office-1.jpg') }}" alt="companyname" class="img-fluid w-100"></div>
               </div>
               <div class="col-lg-7 mt30 h-scl-">
-                <div class="img-ca2set h-scl-base"><img src="images/about/office-2.jpg" alt="companyname" class="img-fluid w-100"></div>
+                <div class="img-ca2set h-scl-base"><img src="{{ asset('Frontend/images/about/office-2.jpg') }}" alt="companyname" class="img-fluid w-100"></div>
               </div>
               <div class="col-lg-7 mt30 h-scl-">
-                <div class="img-ca2set h-scl-base"><img src="images/about/office-3.jpg" alt="companyname" class="img-fluid w-100"></div>
+                <div class="img-ca2set h-scl-base"><img src="{{ asset('Frontend/images/about/office-3.jpg') }}" alt="companyname" class="img-fluid w-100"></div>
               </div>
               <div class="col-lg-5 mt30 h-scl-">
-                <div class="img-ca2set h-scl-base"><img src="images/about/office-4.jpg" alt="companyname" class="img-fluid w-100"></div>
+                <div class="img-ca2set h-scl-base"><img src="{{ asset('Frontend/images/about/office-4.jpg') }}" alt="companyname" class="img-fluid w-100"></div>
               </div>
             </div>
           </div>
@@ -396,7 +396,7 @@
           <div class="col-lg-4 col-sm-6 shape-loc wow fadeIn" data-wow-delay=".2s">
             <div class="office-card hoshd">
               <div class="landscp">
-                <img src="images/location/india-img.png" alt="location" class="img-fluid" />
+                <img src="{{ asset('Frontend/images/location/india-img.png') }}" alt="location" class="img-fluid" />
               </div>
               <div class="info-text-div">
                 <h4>India</h4>
@@ -412,7 +412,7 @@
           <div class="col-lg-4 col-sm-6 shape-loc wow fadeIn" data-wow-delay=".4s">
             <div class="office-card hoshd">
               <div class="landscp">
-                <img src="images/location/italy.png" alt="location" class="img-fluid" />
+                <img src="{{ asset('Frontend/images/location/italy.png') }}" alt="location" class="img-fluid" />
               </div>
               <div class="info-text-div">
                 <h4>Italy</h4>
@@ -428,7 +428,7 @@
           <div class="col-lg-4 col-sm-6 shape-loc wow fadeIn" data-wow-delay=".6s">
             <div class="office-card hoshd">
               <div class="landscp">
-                <img src="images/location/paris.png" alt="location" class="img-fluid" />
+                <img src="{{ asset('Frontend/images/location/paris.png') }}" alt="location" class="img-fluid" />
               </div>
               <div class="info-text-div">
                 <h4>Paris</h4>
