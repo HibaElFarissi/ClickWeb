@@ -7,18 +7,18 @@
 
 
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="{{ asset('dash/css/remixicon.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/flaticon.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/sidebar-menu.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/simplebar.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/apexcharts.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/prism.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/rangeslider.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/sweetalert.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/quill.snow.css') }}">
-    <link rel="stylesheet" href="{{ asset('dash/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/remixicon.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/sidebar-menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/simplebar.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/apexcharts.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/prism.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/rangeslider.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/sweetalert.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/quill.snow.css') }}">
+    <link rel="stylesheet" href="{{ asset('Backend/css/style.css') }}">
 
-    <link href="{{ asset('assets/imgs/icon.png') }}" rel="icon">
+    <link href="{{ asset('Backend/imgs/icon.png') }}" rel="icon">
 
     <title>Clickweb - Dashboard_Admin</title>
 </head>
@@ -687,21 +687,21 @@
 
 
     <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="{{ asset('dash/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('dash/js/sidebar-menu.js') }}"></script>
-    <script src="{{ asset('dash/js/dragdrop.js') }}"></script>
-    <script src="{{ asset('dash/js/rangeslider.min.js') }}"></script>
-    <script src="{{ asset('dash/js/sweetalert.js') }}"></script>
-    <script src="{{ asset('dash/js/quill.min.js') }}"></script>
-    <script src="{{ asset('dash/js/data-table.js') }}"></script>
-    <script src="{{ asset('dash/js/prism.js') }}"></script>
-    <script src="{{ asset('dash/js/clipboard.min.js') }}"></script>
-    <script src="{{ asset('dash/js/feather.min.js') }}"></script>
-    <script src="{{ asset('dash/js/simplebar.min.js') }}"></script>
-    <script src="{{ asset('dash/js/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('dash/js/amcharts.js') }}"></script>
-    <script src="{{ asset('dash/js/custom/ecommerce-chart.js') }}"></script>
-    <script src="{{ asset('dash/js/custom/custom.js') }}"></script>
+    <script src="{{ asset('Backend/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/sidebar-menu.js') }}"></script>
+    <script src="{{ asset('Backend/js/dragdrop.js') }}"></script>
+    <script src="{{ asset('Backend/js/rangeslider.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/sweetalert.js') }}"></script>
+    <script src="{{ asset('Backend/js/quill.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/data-table.js') }}"></script>
+    <script src="{{ asset('Backend/js/prism.js') }}"></script>
+    <script src="{{ asset('Backend/js/clipboard.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/feather.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/simplebar.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/apexcharts.min.js') }}"></script>
+    <script src="{{ asset('Backend/js/amcharts.js') }}"></script>
+    <script src="{{ asset('Backend/js/custom/ecommerce-chart.js') }}"></script>
+    <script src="{{ asset('Backend/js/custom/custom.js') }}"></script>
 </body>
 
 <!-- Mirrored from HibaElFarissi/Protfolio/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 11 Feb 2024 15:49:17 GMT -->
