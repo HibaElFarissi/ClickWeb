@@ -15,16 +15,16 @@
 							<div class="awrd-sec text-w mt40 wow fadeIn" data-wow-delay="0.8s">
 								<h5>Our Achievements</h5>
 								<div class="bages-slider owl-carousel mt20">
-									<div class="img-badge-"><a href="#"> <img src="images/icons/badge1.png" alt="niwax mobile app development company" class="img100w"></a> </div>
-									<div class="img-badge-"><a href="#"> <img src="images/icons/badge2.png" alt="niwax mobile app development company" class="img100w"></a> </div>
-									<div class="img-badge-"><a href="#"> <img src="images/icons/badge3.png" alt="niwax mobile app development company" class="img100w"></a> </div>
-									<div class="img-badge-"><a href="#"> <img src="images/icons/badge4.png" alt="niwax mobile app development company" class="img100w"></a> </div>
+									<div class="img-badge-"><a href="#"> <img src="{{ asset('Frontend/images/icons/badge1.png') }}" alt="niwax mobile app development company" class="img100w"></a> </div>
+									<div class="img-badge-"><a href="#"> <img src="{{ asset('Frontend/images/icons/badge2.png') }}" alt="niwax mobile app development company" class="img100w"></a> </div>
+									<div class="img-badge-"><a href="#"> <img src="{{ asset('Frontend/images/icons/badge3.png') }}" alt="niwax mobile app development company" class="img100w"></a> </div>
+									<div class="img-badge-"><a href="#"> <img src="{{ asset('Frontend/images/icons/badge4.png') }}" alt="niwax mobile app development company" class="img100w"></a> </div>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 v-center">
-						<div class="app-hero-bnr wow fadeIn" data-wow-delay="0.4s"> <img src="images/hero/mobile_hero_banner.png" alt="niwax mobile app development company" class="img-fluid"> </div>
+						<div class="app-hero-bnr wow fadeIn" data-wow-delay="0.4s"> <img src="{{ asset('Frontend/images/hero/mobile_hero_banner.png') }}" alt="niwax mobile app development company" class="img-fluid"> </div>
 					</div>
 				</div>
 			</div>
@@ -33,14 +33,14 @@
 		<div class="weworkfor pt20 pb20 dark-bg2">
 			<div class="container">
 				<div class="logo-weworkfor owl-carousel">
-					<div class="items"><img src="images/client/clients-1.png" alt="niwax html template" class="img100w"></div>
-					<div class="items"><img src="images/client/clients-2.png" alt="niwax html template" class="img100w"></div>
-					<div class="items"><img src="images/client/clients-3.png" alt="niwax html template" class="img100w"></div>
-					<div class="items"><img src="images/client/clients-4.png" alt="niwax html template" class="img100w"></div>
-					<div class="items"><img src="images/client/clients-5.png" alt="niwax html template" class="img100w"></div>
-					<div class="items"><img src="images/client/clients-6.png" alt="niwax html template" class="img100w"></div>
-					<div class="items"><img src="images/client/clients-7.png" alt="niwax html template" class="img100w"></div>
-					<div class="items"><img src="images/client/clients-8.png" alt="niwax html template" class="img100w"></div>
+					<div class="items"><img src="{{ asset('Frontend/images/client/clients-1.png') }}" alt="niwax html template" class="img100w"></div>
+					<div class="items"><img src="{{ asset('Frontend/images/client/clients-2.png') }}" alt="niwax html template" class="img100w"></div>
+					<div class="items"><img src="{{ asset('Frontend/images/client/clients-3.png') }}" alt="niwax html template" class="img100w"></div>
+					<div class="items"><img src="{{ asset('Frontend/images/client/clients-4.png') }}" alt="niwax html template" class="img100w"></div>
+					<div class="items"><img src="{{ asset('Frontend/images/client/clients-5.png') }}" alt="niwax html template" class="img100w"></div>
+					<div class="items"><img src="{{ asset('Frontend/images/client/clients-6.png') }}" alt="niwax html template" class="img100w"></div>
+					<div class="items"><img src="{{ asset('Frontend/images/client/clients-7.png') }}" alt="niwax html template" class="img100w"></div>
+					<div class="items"><img src="{{ asset('Frontend/images/client/clients-8.png') }}" alt="niwax html template" class="img100w"></div>
 				</div>
 			</div>
 		</div>
@@ -65,42 +65,42 @@
 							<div class="row">
 								<div class="col-lg-4 col-md-6 col-sm-12 col-6">
 									<div class="funfct srcl1">
-										<img src="images/icons/startup.svg" alt="niwax app development template">
+										<img src="{{ asset('Frontend/images/icons/startup.svg') }}" alt="niwax app development template">
 										<span class="services-cuntr counter">20</span><span class="services-cuntr">+</span>
 										<p>Years Experience</p>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-12 col-6">
 									<div class="funfct srcl2">
-										<img src="images/icons/team.svg" alt="niwax app development template">
+										<img src="{{ asset('Frontend/images/icons/team.svg') }}" alt="niwax app development template">
 										<span class="services-cuntr counter">250</span><span class="services-cuntr">+</span>
 										<p>Talented Squad</p>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-12 col-6">
 									<div class="funfct srcl3">
-										<img src="images/icons/mobile.svg" alt="niwax app development template">
+										<img src="{{ asset('Frontend/images/icons/mobile.svg') }}" alt="niwax app development template">
 										<span class="services-cuntr counter">1200</span><span class="services-cuntr">+</span>
 										<p>Apps Developed</p>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-12 col-6">
 									<div class="funfct srcl4">
-										<img src="images/icons/computers.svg" alt="niwax app development template">
+										<img src="{{ asset('Frontend/images/icons/computers.svg') }}" alt="niwax app development template">
 										<span class="services-cuntr counter">100</span><span class="services-cuntr">%</span>
 										<p>Projects Delivered</p>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-12 col-6">
 									<div class="funfct srcl5">
-										<img src="images/icons/world.svg" alt="niwax app development template">
+										<img src="{{ asset('Frontend/images/icons/world.svg') }}" alt="niwax app development template">
 										<span class="services-cuntr counter">120</span><span class="services-cuntr">+</span>
 										<p>Countries Served</p>
 									</div>
 								</div>
 								<div class="col-lg-4 col-md-6 col-sm-12 col-6">
 									<div class="funfct srcl1">
-										<img src="images/icons/deal.svg" alt="niwax app development template">
+										<img src="{{ asset('Frontend/images/icons/deal.svg') }}" alt="niwax app development template">
 										<span class="services-cuntr counter">100</span><span class="services-cuntr">%</span>
 										<p>Client Satisfaction</p>
 									</div>
@@ -136,9 +136,9 @@
 							</ul>
 							<div class="tec-icon mt30">
 								<ul class="servc-icon-sldr">
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/android.svg" alt="img"></div> </a></li>
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/apple.svg" alt="img"></div> </a></li>
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/tablet.svg" alt="img"></div> </a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/android.svg') }}" alt="img"></div> </a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/apple.svg') }}" alt="img"></div> </a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/tablet.svg') }}" alt="img"></div> </a></li>
 								</ul>
 							</div>
 							<p class="mt20">Design and develop a creative website with our microscopic detailing and scrupulous strategies.</p>
@@ -156,10 +156,10 @@
 							</ul>
 							<div class="tec-icon mt30">
 								<ul class="servc-icon-sldr">
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/ux.svg" alt="img"></div></a></li>
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/php.svg" alt="img"></div></a></li>
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/java.svg" alt="img"></div></a></li>
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/wordpress.svg" alt="img"></div></a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/ux.svg') }}" alt="img"></div></a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/php.svg') }}" alt="img"></div></a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/java.svg') }}" alt="img"></div></a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/wordpress.svg') }}" alt="img"></div></a></li>
 								</ul>
 							</div>
 							<p class="mt20">Design and develop a creative website with our microscopic detailing and scrupulous strategies.</p>
@@ -176,9 +176,9 @@
 							</ul>
 							<div class="tec-icon mt30">
 								<ul class="servc-icon-sldr">
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/magento.svg" alt="img"></div></a></li>
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/shopify.svg" alt="img"></div></a></li>
-									<li><a href="#"><div class="img-iconbb"><img src="images/icons/woocommerce.svg" alt="img"></div></a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/magento.svg') }}" alt="img"></div></a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/shopify.svg') }}" alt="img"></div></a></li>
+									<li><a href="#"><div class="img-iconbb"><img src="{{ asset('Frontend/images/icons/woocommerce.svg') }}" alt="img"></div></a></li>
 								</ul>
 							</div>
 							<p class="mt20">Design and develop a creative website with our microscopic detailing and scrupulous strategies.</p>
@@ -200,21 +200,21 @@
 							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 							<div class="itm-media-object mt40 tilt-3d">
 								<div class="media">
-									<div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000"><img src="images/icons/computers.svg" alt="icon" class="layer"></div>
+									<div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000"><img src="{{ asset('Frontend/images/icons/computers.svg') }}" alt="icon" class="layer"></div>
 									<div class="media-body">
 										<h4>Streamlined Project Management</h4>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet ligula nec leo elementum semper. Mauris aliquet egestas metus.</p>
 									</div>
 								</div>
 								<div class="media mt40">
-									<div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000"><img src="images/icons/worker.svg" alt="icon" class="layer"></div>
+									<div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000"><img src="{{ asset('Frontend/images/icons/worker.svg') }}" alt="icon" class="layer"></div>
 									<div class="media-body">
 										<h4>A Dedicated Team of Experts</h4>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet ligula nec leo elementum semper. Mauris aliquet egestas metus.</p>
 									</div>
 								</div>
 								<div class="media mt40">
-									<div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000"> <img src="images/icons/deal.svg" alt="icon" class="layer"></div>
+									<div class="img-ab- base" data-tilt data-tilt-max="20" data-tilt-speed="1000"> <img src="{{ asset('Frontend/images/icons/deal.svg') }}" alt="icon" class="layer"></div>
 									<div class="media-body">
 										<h4>Completion of Project in Given Time</h4>
 										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquet ligula nec leo elementum semper. Mauris aliquet egestas metus.</p>
@@ -224,7 +224,7 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div  data-tilt data-tilt-max="5" data-tilt-speed="1000" class="single-image bg-shape-dez wow fadeIn" data-wow-duration="2s"><img src="images/about/about-company.jpg" alt="image" class="img-fluid"></div>
+						<div  data-tilt data-tilt-max="5" data-tilt-speed="1000" class="single-image bg-shape-dez wow fadeIn" data-wow-duration="2s"><img src="{{ asset('Frontend/images/about/about-company.jpg') }}" alt="image" class="img-fluid"></div>
 						<p class="text-center mt30">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
 						<div class="cta-card mt60 text-center">
 							<h3 class="mb20">Let's Start a  <span class="text-second text-bold">New Project</span> Together</h3>
@@ -251,7 +251,7 @@
 					<div class="col-lg-4 col-sm-6 col mt40 wow fadeIn" data-wow-delay="0.2s">
 						<div class="isotope_item up-hor">
 							<div class="item-image">
-								<a href="#"><img src="images/portfolio/app-img1.jpg" alt="image" class="img-fluid" /> </a>
+								<a href="#"><img src="{{ asset('Frontend/images/portfolio/app-img1.jpg') }}" alt="image" class="img-fluid" /> </a>
 							</div>
 							<div class="item-info-div shdo">
 								<h4><a href="#">Pets Care & Training App</a></h4>
@@ -262,7 +262,7 @@
 					<div class="col-lg-4 col-sm-6 mt40 wow fadeIn" data-wow-delay="0.4s">
 						<div class="isotope_item up-hor">
 							<div class="item-image">
-								<a href="#"><img src="images/portfolio/app-img2.jpg" alt="image" class="img-fluid" /> </a>
+								<a href="#"><img src="{{ asset('Frontend/images/portfolio/app-img2.jpg') }}" alt="image" class="img-fluid" /> </a>
 							</div>
 							<div class="item-info-div shdo">
 								<h4><a href="#">Car Rental App</a></h4>
@@ -273,7 +273,7 @@
 					<div class="col-lg-4 col-sm-6 mt40 wow fadeIn" data-wow-delay="0.6s">
 						<div class="isotope_item up-hor">
 							<div class="item-image">
-								<a href="#"><img src="images/portfolio/app-img3.jpg" alt="image" class="img-fluid" /> </a>
+								<a href="#"><img src="{{ asset('Frontend/images/portfolio/app-img3.jpg') }}" alt="image" class="img-fluid" /> </a>
 							</div>
 							<div class="item-info-div shdo">
 								<h4><a href="#">Event Management App</a></h4>
@@ -284,7 +284,7 @@
 					<div class="col-lg-4 col-sm-6 mt40 wow fadeIn" data-wow-delay="0.8s">
 						<div class="isotope_item up-hor">
 							<div class="item-image">
-								<a href="#"><img src="images/portfolio/app-img4.jpg" alt="image" class="img-fluid" /> </a>
+								<a href="#"><img src="{{ asset('Frontend/images/portfolio/app-img4.jpg') }}" alt="image" class="img-fluid" /> </a>
 							</div>
 							<div class="item-info-div shdo">
 								<h4><a href="#">Restaurant App</a></h4>
@@ -295,7 +295,7 @@
 					<div class="col-lg-4 col-sm-6 mt40 wow fadeIn" data-wow-delay="1s">
 						<div class="isotope_item up-hor">
 							<div class="item-image">
-								<a href="#"><img src="images/portfolio/app-img5.jpg" alt="image" class="img-fluid" /> </a>
+								<a href="#"><img src="{{ asset('Frontend/images/portfolio/app-img5.jpg') }}" alt="image" class="img-fluid" /> </a>
 							</div>
 							<div class="item-info-div shdo">
 								<h4><a href="#">Restaurant / Hotel App</a></h4>
@@ -306,7 +306,7 @@
 					<div class="col-lg-4 col-sm-6 mt40 wow fadeIn" data-wow-delay="1.2s">
 						<div class="isotope_item up-hor">
 							<div class="item-image">
-								<a href="#"><img src="images/portfolio/app-img6.jpg" alt="image" class="img-fluid" /> </a>
+								<a href="#"><img src="{{ asset('Frontend/images/portfolio/app-img6.jpg') }}" alt="image" class="img-fluid" /> </a>
 							</div>
 							<div class="item-info-div shdo">
 								<h4><a href="#">Super Mart App</a></h4>
@@ -334,51 +334,51 @@
 						<div class="client-logoset">
 							<ul class="row text-center clearfix apppg">
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay=".2s">
-									<div class="brand-logo hoshd"><img src="images/client/logo1.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo1.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Shutter, USA</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay=".4s">
-									<div class="brand-logo hoshd"><img src="images/client/logo2.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo2.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Hipster, USA</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay=".6s">
-									<div class="brand-logo hoshd"><img src="images/client/logo3.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo3.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Happy, USA</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay=".8s">
-									<div class="brand-logo hoshd"><img src="images/client/logo4.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo4.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Opera Tours, USA</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay="1s">
-									<div class="brand-logo hoshd"><img src="images/client/logo5.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo5.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Royale Stone, UK</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay="1.2s">
-									<div class="brand-logo hoshd"><img src="images/client/logo6.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo6.png') }}" alt="clients" class="img-fluid"></div>
 									<p>QTP, Australia</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay="1.4s">
-									<div class="brand-logo hoshd"><img src="images/client/logo7.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo7.png') }}" alt="clients" class="img-fluid"></div>
 									<p>PAPA, Malaysia</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay="1.6s">
-									<div class="brand-logo hoshd"><img src="images/client/logo8.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo8.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Coffee, Australia</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay="1.8s">
-									<div class="brand-logo hoshd"><img src="images/client/logo9.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo9.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Bakery, India</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay="2s">
-									<div class="brand-logo hoshd"><img src="images/client/logo10.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo10.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Iconico, India</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay="2.2s">
-									<div class="brand-logo hoshd"><img src="images/client/logo11.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo11.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Tom N Jerry, UK</p>
 								</li>
 								<li class="col-lg-2 col-md-3 col-sm-4 col-6 mt30 wow fadeIn" data-wow-delay="2.4s">
-									<div class="brand-logo hoshd"><img src="images/client/logo12.png" alt="clients" class="img-fluid"></div>
+									<div class="brand-logo hoshd"><img src="{{ asset('Frontend/images/client/logo12.png') }}" alt="clients" class="img-fluid"></div>
 									<p>Arch, India</p>
 								</li>
 							</ul>
@@ -402,25 +402,25 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-6 col-6 wow fadeIn" data-wow-delay=".2s">
 						<div class="badges-content">
-							<img src="images/about/badges-a.png" alt="budges"  class="img-fluid">
+							<img src="{{ asset('Frontend/images/about/badges-a.png') }}" alt="budges"  class="img-fluid">
 							<p>ABC DEF Industry Leader</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-6 wow fadeIn" data-wow-delay=".4s">
 						<div class="badges-content">
-							<img src="images/about/badges-b.png" alt="budges"  class="img-fluid">
+							<img src="{{ asset('Frontend/images/about/badges-b.png') }}" alt="budges"  class="img-fluid">
 							<p>Best eCommerce Development Company</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-6 wow fadeIn" data-wow-delay=".6s">
 						<div class="badges-content">
-							<img src="images/about/badges-c.png" alt="budges"  class="img-fluid">
+							<img src="{{ asset('Frontend/images/about/badges-c.png') }}" alt="budges"  class="img-fluid">
 							<p>ABC DEF High Performer Winner</p>
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-6 col-6 wow fadeIn" data-wow-delay=".8s">
 						<div class="badges-content">
-							<img src="images/about/badges-d.png" alt="budges"  class="img-fluid">
+							<img src="{{ asset('Frontend/images/about/badges-d.png') }}" alt="budges"  class="img-fluid">
 							<p>Top App Developer 2019-20</p>
 						</div>
 					</div>
@@ -447,18 +447,18 @@
 					</div>
 				</div>
 				<div class="row mt30">
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.1s"> <div class="industry-workfor hoshd"><img src="images/icons/house.svg" alt="img"> <h6>Real estate</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.3s"> <div class="industry-workfor hoshd"><img src="images/icons/travel-case.svg" alt="img"> <h6>Tour &amp; Travels</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.5s"> <div class="industry-workfor hoshd"><img src="images/icons/video-tutorials.svg" alt="img"> <h6>Education</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.7s"> <div class="industry-workfor hoshd"><img src="images/icons/taxi.svg" alt="img"> <h6>Transport</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.9s"> <div class="industry-workfor hoshd"><img src="images/icons/event.svg" alt="img"> <h6>Event</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.1s"> <div class="industry-workfor hoshd"><img src="images/icons/smartphone.svg" alt="img"> <h6>eCommerce</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.3s"> <div class="industry-workfor hoshd"><img src="images/icons/joystick.svg" alt="img"> <h6>Game</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.5s"> <div class="industry-workfor hoshd"><img src="images/icons/healthcare.svg" alt="img"> <h6>Healthcare</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.7s"> <div class="industry-workfor hoshd"><img src="images/icons/money-growth.svg" alt="img"> <h6>Finance</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.9s"> <div class="industry-workfor hoshd"><img src="images/icons/baker.svg" alt="img"> <h6>Restaurant</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="2.1s"> <div class="industry-workfor hoshd"><img src="images/icons/mobile-app.svg" alt="img"> <h6>On-Demand</h6> </div></div>
-					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="2.3s"> <div class="industry-workfor hoshd"><img src="images/icons/groceries.svg" alt="img"> <h6>Grocery</h6> </div></div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.1s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/house.svg') }}" alt="img"> <h6>Real estate</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.3s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/travel-case.svg') }}" alt="img"> <h6>Tour &amp; Travels</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.5s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/video-tutorials.svg') }}" alt="img"> <h6>Education</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.7s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/taxi.svg') }}" alt="img"> <h6>Transport</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="0.9s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/event.svg') }}" alt="img"> <h6>Event</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.1s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/smartphone.svg') }}" alt="img"> <h6>eCommerce</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.3s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/joystick.svg') }}" alt="img"> <h6>Game</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.5s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/healthcare.svg') }}" alt="img"> <h6>Healthcare</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.7s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/money-growth.svg') }}" alt="img"> <h6>Finance</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="1.9s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/baker.svg') }}" alt="img"> <h6>Restaurant</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="2.1s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/mobile-app.svg') }}" alt="img"> <h6>On-Demand</h6> </div></div>
+					<div class="col-lg-3 col-sm-6 col-6 wow fadeIn" data-wow-delay="2.3s"> <div class="industry-workfor hoshd"><img src="{{ asset('Frontend/images/icons/groceries.svg') }}" alt="img"> <h6>Grocery</h6> </div></div></div>
 				</div>
 			</section>
 			<!--End  work-category-->
@@ -475,14 +475,14 @@
 								<h4>Read More Reviews</h4>
 							</div>
 							<div class="row mt30 justify-content-center">
-								<a href="#" target="blank" class="wow fadeIn col-lg-4 col-4" data-wow-delay=".2s"><img src="images/about/reviews-icon-1.png" alt="review" class="img-fluid"></a>
-								<a href="#" target="blank" class="wow fadeIn col-lg-4 col-4" data-wow-delay=".4s"><img src="images/about/reviews-icon-2.png" alt="review" class="img-fluid"></a>
-								<a href="#" target="blank" class="wow fadeIn col-lg-4 col-4" data-wow-delay=".6s"><img src="images/about/reviews-icon-3.png" alt="review" class="img-fluid"></a>
+								<a href="#" target="blank" class="wow fadeIn col-lg-4 col-4" data-wow-delay=".2s"><img src="{{ asset('Frontend/images/about/reviews-icon-1.png') }}" alt="review" class="img-fluid"></a>
+								<a href="#" target="blank" class="wow fadeIn col-lg-4 col-4" data-wow-delay=".4s"><img src="{{ asset('Frontend/images/about/reviews-icon-2.png') }}" alt="review" class="img-fluid"></a>
+								<a href="#" target="blank" class="wow fadeIn col-lg-4 col-4" data-wow-delay=".6s"><img src="{{ asset('Frontend/images/about/reviews-icon-3.png') }}" alt="review" class="img-fluid"></a>
 							</div>
 						</div>
 						<div class="col-lg-7">
 							<div class="pl50">
-								<div class="shape shape-a1"><img src="images/shape/shape-3.svg" alt="shape"></div>
+								<div class="shape shape-a1"><img src="{{ asset('Frontend/images/shape/shape-3.svg') }}" alt="shape"></div>
 								<div class="testimonial-card-a tcd owl-carousel">
 									<div class="testimonial-card">
 										<div class="tt-text">
@@ -490,7 +490,7 @@
 										</div>
 										<div class="client-thumbs mt30">
 											<div class="media v-center upset">
-												<div class="user-image bdr-radius"><img src="images/user-thumb/girl.jpg" alt="girl" class="img-fluid rounded-circle" /></div>
+												<div class="user-image bdr-radius"><img src="{{ asset('Frontend/images/user-thumb/girl.jpg') }}" alt="girl" class="img-fluid rounded-circle" /></div>
 												<div class="media-body user-info v-center">
 													<h5>Mike Smith</h5>
 													<p>Founder at Itawa Real eState</p>
@@ -505,7 +505,7 @@
 										</div>
 										<div class="client-thumbs mt30">
 											<div class="media v-center upset">
-												<div class="user-image bdr-radius"><img src="images/user-thumb/girl.jpg" alt="girl" class="img-fluid rounded-circle" /></div>
+												<div class="user-image bdr-radius"><img src="{{ asset('Frontend/images/user-thumb/girl.jpg') }}" alt="girl" class="img-fluid rounded-circle" /></div>
 												<div class="media-body user-info v-center">
 													<h5>Mike Smith</h5>
 													<p>Founder at Itawa Real eState</p>
@@ -556,7 +556,7 @@
 						<div class="col-lg-4 col-sm-6 shape-loc wow fadeIn" data-wow-delay=".2s">
 							<div class="office-card hoshd">
 								<div class="landscp">
-									<img src="images/location/india-img.png" alt="location" class="img-fluid" />
+									<img src="{{ asset('Frontend/images/location/india-img.png') }}" alt="location" class="img-fluid" />
 								</div>
 								<div class="info-text-div">
 									<h4>India</h4>
@@ -573,7 +573,7 @@
 						<div class="col-lg-4 col-sm-6 shape-loc wow fadeIn" data-wow-delay=".4s">
 							<div class="office-card hoshd">
 								<div class="landscp">
-									<img src="images/location/italy.png" alt="location" class="img-fluid" />
+									<img src="{{ asset('Frontend/images/location/italy.png') }}" alt="location" class="img-fluid" />
 								</div>
 								<div class="info-text-div">
 									<h4>Italy</h4>
@@ -590,7 +590,7 @@
 						<div class="col-lg-4 col-sm-6 shape-loc wow fadeIn" data-wow-delay=".6s">
 							<div class="office-card hoshd">
 								<div class="landscp">
-									<img src="images/location/paris.png" alt="location" class="img-fluid" />
+									<img src="{{ asset('Frontend/images/location/paris.png') }}" alt="location" class="img-fluid" />
 								</div>
 								<div class="info-text-div">
 									<h4>Paris</h4>
