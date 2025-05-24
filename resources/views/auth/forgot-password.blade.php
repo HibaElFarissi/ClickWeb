@@ -1,25 +1,85 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8"/>
+  <title>ClickWeb - Web Design &amp; Digital Marketing Agency</title>
+  <meta name="description" content="Creative Agency, Marketing Agency Template">
+  <meta name="keywords" content="Creative Agency, Marketing Agency">
+  <meta name="author" content="rajesh-doot">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#101010">
+  <!--website-favicon-->
+  <link href="images/favicon.png" rel="icon">
+  <!--plugin-css-->
+  <link href="{{ asset('FrontEnd/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('FrontEnd/css/plugin.min.css') }}" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- template-style-->
+  <link href="{{ asset('FrontEnd/css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('FrontEnd/css/responsive.css') }}" rel="stylesheet">
+  <link href="{{ asset('FrontEnd/css/darkmode.css') }}" rel="stylesheet">
+</head>
+<body>
+  <!--Start login Form-->
 
+  <section class="login-page pad-tb">
+    <div class="v-center m-auto">
+      <a href="#" class="d-block text-center mb30"><img src="{{ asset('FrontEnd/images/white-logo.svg') }}" alt="Logo" class="mega-darks-logo"></a>
+      <div class="login-form-div">        
+        <h4 class="mb40 text-center">Forgot your password</h4>
+        <div class="form-block">
+            <x-auth-session-status class="mb-4" :status="session('status')" />
+
+            <form method="POST" id="contact-form" action="{{ route('password.email') }}">
+                @csrf
+            <div class="fieldsets row">
+              <div class="col-md-12 form-group">
+                <input id="form_name" type="email"  placeholder="Email" name="email" value="{{old('email')}}" required autofocus >
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+           
+            </div>
+          
+            <div class="fieldsets row mt20">
+              <div class="col-md-6 form-group v-center">
+                <button type="submit" class="lnk btn-main bg-btn">Submit <span class="circle"></span></button>
+              </div>
+          
+              
+
+            </div>            
+                      
+          </form>
+        </div>
+      </div>      
+      </div>      
+    </section>
+    <!--End login Form-->
+
+
+  
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="{{ asset('FrontEnd/js/vendor/modernizr-3.5.0.min.js') }}"></script>
+<script src="{{ asset('FrontEnd/js/jquery.min.js') }}"></script>
+<script src="{{ asset('FrontEnd/js/bootstrap.bundle.min.js') }}"></script> 
+<script src="{{ asset('FrontEnd/js/plugin.min.js') }}"></script>
+<!--common script file-->
+<script src="{{ asset('FrontEnd/js/main.js') }}"></script>
+</body>
+</html>
     <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+ 
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+   
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+       
 
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+   
+        
+
+         
+   
+
+       
+

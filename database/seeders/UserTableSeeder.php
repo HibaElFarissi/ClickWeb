@@ -32,7 +32,14 @@ class UserTableSeeder extends Seeder
                 'role'=> 'user',
                 'status'=>'active',
             ],
-
+            [
+                'name'=> 'User',
+                'username'=> 'user',
+                'email' => 'oussama12as@gmail.com',
+                'password' => Hash::make('1227'),
+                'role'=> 'user',
+                'status'=>'active',
+            ],
         ]);
     }
 }

@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
 use Illuminate\Http\Request;
 
 class FaqController extends Controller
 {
+    public function __construct()
+    {
+     
+        $this->middleware(['auth','role:admin']);
+       
+    }
     public function index()
     {
-        //
+        $Faqs = Faq::all();
+        return view('Faqs.index', compact('Faqs'));
     }
 
     /**
@@ -16,7 +24,9 @@ class FaqController extends Controller
      */
     public function create()
     {
-        //
+        $Faq = new Faq();
+        $isUpdate = false;
+        return view('Faqs.form', compact('Faq', 'isUpdate'));
     }
 
     /**
@@ -24,7 +34,16 @@ class FaqController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'question' => 'required|string',
+            
+            'answer' => 'required',
+        
+
+        ]);
+        
+        Faq::create($validated);
+        return redirect()->route('Faqs.index')->with('success', 'Faq created successfully.');
     }
 
     /**
@@ -40,15 +59,25 @@ class FaqController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $Faq = Faq::findOrFail($id);
+        $isUpdate = true;
+        return view('Faqs.form', compact('Faq', 'isUpdate'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Faq $Faq)
     {
-        //
+        $validated = $request->validate([
+            'question' => 'required|string',
+            
+            'answer' => 'required',
+        
+
+        ]);
+        $Faq->update($validated);
+        return redirect()->route('Faqs.index')->with('success', 'Faq updated successfully.');
     }
 
     /**
@@ -56,7 +85,8 @@ class FaqController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Faq::findOrFail($id)->delete();
+        return to_route('Faqs.index')->with('success', 'Faqs entry deleted successfully.');
     }
 }
 

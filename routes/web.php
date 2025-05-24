@@ -70,7 +70,7 @@ Route::resource('Tags', TagController::class);
 Route::resource('Demande', DemandeController::class);
 Route::resource('Pricing', PricingController::class);
 Route::resource('Team', TeamController::class);
-Route::resource('Faq', FaqController::class);
+Route::resource('Faqs', FaqController::class);
 Route::resource('Feedback', FeedbackController::class);
 
 
@@ -83,9 +83,6 @@ Route::middleware('auth')->group(function () {
     });
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 
 Route::middleware('auth')->group(function () {

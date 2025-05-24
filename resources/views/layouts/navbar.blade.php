@@ -54,11 +54,11 @@
 				 </li>
 				 <li class="sbmenu rpdropdown">
 					<a href="#" class="menu-links">Références</a>
-                    <div class="nx-dropdown">
+                    <div class="nx-dropdown menu-dorpdown">
                         <div class="sub-menu-section">
                            {{-- <div class="container"> --}}
                               <div class="sub-menu-center-block">
-                                <div class="sub-menu-column">
+                                <div class="sub-menu-column smfull">
                                     <ul>
                                        <li><a href="/Projects">Creating Websites</a></li>
                                        <li><a href="/Designs">Designs</a></li>
@@ -73,6 +73,7 @@
 					<a href="/Contact" class="menu-links">Contact</a>
 				</li>
               </ul>
+            
               <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
               <ul class="nav-list right-end-btn">
               <li class="hidemobile"><a data-bs-toggle="offcanvas" href="#offcanvasExample" class="btn-round- btn-br bg-btn2"><i class="fas fa-phone-alt"></i></a></li>
