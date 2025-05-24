@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en" class="no-js">
 
 <head>
@@ -28,7 +28,7 @@
 <body>
     <!--Start login Form-->
     <!-- Password Reset Token -->
-    <input type="hidden" name="token" value="{{ $request->route('token') }}">
+    
 
     <!-- Email Address -->
     <section class="login-page pad-tb">
@@ -42,37 +42,35 @@
 
                     <form method="POST" id="contact-form" action="{{ route('password.store') }}">
                         @csrf
-
+                   <input type="hidden" name="token" value="{{ $request->route('token') }}">
                         <div class="fieldsets row">
                             <div class="col-md-12 form-group">
                                 <input id="form_name" type="email" placeholder="Email" name="email"
-                                    value="{{ old('email') }}" required autofocus>
+                                    value="{{old('email', $request->email)}}" required>
 
                                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
 
                             </div>
                             <div class="col-md-12 form-group">
                                 <input id="password" type="password" placeholder="Password" name="password"
-                                    value="{{ old('password') }}" required autofocus>
+                                required  >
                                   
                                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
 
                             </div>
                             <div class="col-md-12 form-group">
                                 <input id="password_confirmation" type="password" placeholder="Confirm Password" name="password_confirmation"
-                                    value="{{ old('password_confirmation') }}" required autofocus>
+                                required>
 
                                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
 
                             </div>
-                            <div class="fieldsets row mt20">
+                      
+                            <div class="fieldsets row ">
                                 <div class="col-md-6 form-group v-center">
                                     <button type="submit" class="lnk btn-main bg-btn">Submit <span
                                             class="circle"></span></button>
                                 </div>
-
-
-
                             </div>
 
                     </form>
@@ -95,5 +93,3 @@
 
 </html>
 <!-- Session Status -->
-
-

@@ -23,9 +23,19 @@
 </head>
 <body>
   <!--Start login Form-->
-  <x-auth-session-status class="mb-4" :status="session('status')" />
+  
+
   <section class="login-page pad-tb">
+   
+
     <div class="v-center m-auto">
+      @if (session('status'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{ session('status') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
       <a href="#" class="d-block text-center mb30"><img src="{{ asset('FrontEnd/images/white-logo.svg') }}" alt="Logo" class="mega-darks-logo"></a>
       <div class="login-form-div">        
         <h4 class="mb40 text-center">Login to your Account</h4>
