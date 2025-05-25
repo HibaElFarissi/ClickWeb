@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('pricings', function (Blueprint $table) {
             $table->id();
+             $table->string('type');
+              $table->string('titre');
+               $table->string('prix');
+                $table->longText('description');
             $table->timestamps();
         });
     }

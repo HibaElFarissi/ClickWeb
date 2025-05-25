@@ -195,8 +195,31 @@
                         </li>
                     </ul>
 
+                </li>
+                      <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle active">
 
-                    {{-- Education --}}
+                        {{-- <i data-feather="align-left" class="menu-icon tf-icons"></i> --}}
+                        <i data-feather="dollar-sign" class="menu-icon tf-icons"></i>
+                        <span class="title">Pricings</span>
+                    </a>
+                    <ul class="menu-sub">
+                      
+
+                        <li class="menu-item">
+                            <a href="{{route('Pricings.index')}}" class="menu-link">
+                                All Pricings
+                            </a>
+                        </li>
+
+                        <li class="menu-item">
+                            <a href="{{route('Pricings.create')}}" class="menu-link">
+                                Create Pricing
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle active">
 

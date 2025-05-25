@@ -68,7 +68,7 @@ Route::resource('Categories', CategoriesController::class);
 Route::resource('Tags', TagController::class);
 
 Route::resource('Demande', DemandeController::class);
-Route::resource('Pricing', PricingController::class);
+Route::resource('Pricings', PricingController::class);
 Route::resource('Teams', TeamController::class);
 Route::resource('Faqs', FaqController::class);
 Route::resource('Feedback', FeedbackController::class);
