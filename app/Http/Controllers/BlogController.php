@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -11,8 +12,9 @@ class BlogController extends Controller
      */
     public function Affichage()
     {
-        //
-        return view('pages.Blog');
+           $Articles=Article::latest()->get();
+        
+        return view('pages.Blog',compact('Articles'));
     }
     
     public function index()

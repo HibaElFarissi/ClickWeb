@@ -55,8 +55,8 @@ Route::resource('Our-Blog', BlogController::class);
 Route::resource('Our-Contact', ContactController::class);
 
 //Categories :
-Route::resource('Article', ArticleController::class);
-Route::resource('ArticleCategory',ArticleCategoryController::class);
+Route::resource('Articles', ArticleController::class);
+Route::resource('ArticleCategorys',ArticleCategoryController::class);
 Route::resource('Designs_all', DesignsController::class);
 Route::resource('DesignCategory',DesignCategoryController::class);
 Route::resource('Videos_all', VideosController::class);
@@ -69,10 +69,9 @@ Route::resource('Tags', TagController::class);
 
 Route::resource('Demande', DemandeController::class);
 Route::resource('Pricing', PricingController::class);
-Route::resource('Team', TeamController::class);
+Route::resource('Teams', TeamController::class);
 Route::resource('Faqs', FaqController::class);
 Route::resource('Feedback', FeedbackController::class);
-
 
 
 

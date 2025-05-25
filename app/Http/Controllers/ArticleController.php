@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
+use App\Models\ArticleCategory;
+use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
@@ -11,7 +14,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $Articles=Article::all();
+        // $Settings = Setting::paginate(1);
+        return view('Articles.index' , compact('Articles'));
     }
 
     /**
@@ -19,7 +24,10 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        $Article = new Article();
+        $isUpdate = false;
+        $Categories=ArticleCategory::all();
+        return view('Articles.from',compact('Categories','Article','isUpdate'));
     }
 
     /**
@@ -27,7 +35,28 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'title'=> 'required',
+            
+             'text'=> 'required',
+            
+             'photo'=> 'nullable',
+             
+             'article_category_id'=>'required',
+         ]);
+ 
+         // $validatedData=$request->all();
+         $validatedData['user_id'] = Auth::id();
+ 
+          // Handle photo upload
+         if ($request->hasFile('photo')) {
+             $photoPath1 = $request->file('photo')->store('Articles', 'public');
+             $validatedData['photo'] = $photoPath1;
+         }
+        
+         Article::create($validatedData);
+     
+         return redirect()->route('Articles.index');
     }
 
     /**
@@ -35,7 +64,15 @@ class ArticleController extends Controller
      */
     public function show(string $id)
     {
-        //
+        
+        $Categories=ArticleCategory::all();
+        $Categories = ArticleCategory::withCount('blog')->get();
+        $Post=Article::where('id', '!=', $id)->latest()->paginate(4);
+        $Article = Article::findOrFail($id);
+     
+        // $Settings = Setting::paginate(1);
+        // $teams=team::paginate(1);
+        return view('Articles.show', compact('Article','Post','Categories'));
     }
 
     /**
@@ -43,7 +80,10 @@ class ArticleController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $Article = Article::findOrFail($id);
+        $Categories = ArticleCategory::all();
+        $isUpdate = true;
+        return view('Articles.from', compact('Article','Categories','isUpdate'));
     }
 
     /**
@@ -51,7 +91,28 @@ class ArticleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validatedData=$request->validate([
+           'title'=> 'required',
+            
+             
+             'text'=> 'required',
+            
+             'photo'=> 'nullable',
+             
+             'article_category_id'=>'required',
+         ]);
+         $validatedDataphoto['user_id'] = Auth::id();
+
+         $Article=Article::findOrFail($id);
+         
+         if($request->hasFile('photo')){
+             $photoPath1 = $request->file('photo')->store('Articles','public');
+             $validatedData['photo']=$photoPath1;
+         }
+         
+         $Article->update($validatedData);
+      
+         return to_route('Articles.index');
     }
 
     /**
@@ -59,6 +120,7 @@ class ArticleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Article::findOrFail($id)->delete();
+        return to_route('Articles.index');
     }
 }
