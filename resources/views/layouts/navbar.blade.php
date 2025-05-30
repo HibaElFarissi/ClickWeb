@@ -47,10 +47,10 @@
 					<a href="/" class="menu-links">Home</a>
 				 </li>
 				 <li class="sbmenu">
-					<a href="/About" class="menu-links">About</a>
+					<a href="{{route('About')}}" class="menu-links">About</a>
 				 </li>
 				 <li class="sbmenu">
-					<a href="/Service" class="menu-links">Services</a>
+					<a href="{{route('Service')}}" class="menu-links">Services</a>
 				 </li>
 				 <li class="sbmenu rpdropdown">
 					<a href="#" class="menu-links">Références</a>
@@ -60,17 +60,17 @@
                               <div class="sub-menu-center-block">
                                 <div class="sub-menu-column smfull">
                                     <ul>
-                                       <li><a href="/Projects">Creating Websites</a></li>
-                                       <li><a href="/Designs">Designs</a></li>
-                                       <li><a href="/Videos">Videos</a></li>
+                                       <li><a href="{{route('Projects')}}">Creating Websites</a></li>
+                                       <li><a href="{{route('Designs')}}">Designs</a></li>
+                                       <li><a href="{{route('Videos')}}">Videos</a></li>
                                     </ul>
                     </div>
 				 </li>
 				 <li class="sbmenu rpdropdown">
-					<a href="/Blog" class="menu-links">Blog</a>
+					<a href="{{route('Blog')}}" class="menu-links">Blog</a>
 				</li>
 				 <li class="sbmenu rpdropdown">
-					<a href="/Contact" class="menu-links">Contact</a>
+					<a href="{{route('Contact')}}" class="menu-links">Contact</a>
 				</li>
               </ul>
             
@@ -92,30 +92,30 @@
 				 <a href="/">Home</a>
 			  </li>
 			  <li>
-				<a href="/About">About</a>
+				<a href="{{route('About')}}">About</a>
 			  </li>
 			  <li>
-				<a href="/Service">Services</a>
+				<a href="{{route('Service')}}">Services</a>
 			  </li>
 			  <li>
 				<a href="#">Réferences</a>
                     <ul>
                         <li>
-                            <a href="/Projects">Websites</a>
+                            <a href="{{route('Projects')}}">Websites</a>
                         </li>
                         <li>
-                            <a href="/Designs">Designs</a>
+                            <a href="{{route('Designs')}}">Designs</a>
                         </li>
                         <li>
-                            <a href="/Videos">Videos</a>
+                            <a href="{{route('Videos')}}">Videos</a>
                         </li>
                     </ul>
 			  </li>
 			  <li>
-				<a href="/Blog">Blog</a>
+				<a href="{{route('Blog')}}">Blog</a>
 			  </li>
               <li>
-                <a href="/Contact">Contact</a>
+                <a href="{{route('Contact')}}">Contact</a>
              </li>
 		   </ul>
 		   <ul class="bottom-nav">
@@ -296,7 +296,7 @@
                     <h5>Company</h5>
                     <ul class="footer-address-list link-hover">
                         <li><a href="get-quote.html">Contact</a></li>
-                        <li><a href="javascript:void(0)">Customer's FAQ</a></li>
+                        <li><a href="{{route('Faq')}}">Customer's FAQ</a></li>
                         <li><a href="javascript:void(0)">Refund Policy</a></li>
                         <li><a href="javascript:void(0)">Privacy Policy</a></li>
                         <li><a href="javascript:void(0)">Terms and Conditions</a></li>

@@ -10,8 +10,14 @@ class Pricing extends Model
     use HasFactory;
     protected $fillable = [
         'type',
-       'titre',
+        'titre',
         'prix',
         'description',
+        'Pricing_category_id',
     ];
+     public function categorie__Pricing(){
+        
+        return $this->belongsTo(PricingCategory::class , 'Pricing_category_id');
+
+    }
 }

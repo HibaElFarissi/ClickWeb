@@ -82,7 +82,22 @@
                                 @enderror
                             </div>
                             
-                           
+                           <br> <br> <br>
+    <div class="col-lg-12">
+        <div class="form-group mb-4">
+            <label class="label">Categories</label>
+            <div class="form-group position-relative">
+                <select name="Pricing_category_id" id="Pricing_category_id" class="form-select form-control h-58" aria-label="Default select example">
+                   
+                         @foreach ($Categories as $Categorie)
+                         <option  value="{{$Categorie->id}}">{{ $Categorie->name}}</option>
+                         @endforeach
+                   
+                    
+                </select>
+            </div>
+        </div>
+    </div>
                          <div class="form-group">
                             <input type="submit" class="btn btn-primary fw-semibold text-white py-3 px-4 mt-2 w-100" value="{{ $isUpdate ? 'Edit' : 'Create' }}">
                         </div>

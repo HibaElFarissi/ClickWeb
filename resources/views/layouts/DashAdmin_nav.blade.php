@@ -204,7 +204,11 @@
                         <span class="title">Pricings</span>
                     </a>
                     <ul class="menu-sub">
-                      
+                      <li class="menu-item">
+                            <a href="{{route('PricingCategory.index')}}" class="menu-link">
+                                Pricing Category
+                            </a>
+                        </li>
 
                         <li class="menu-item">
                             <a href="{{route('Pricings.index')}}" class="menu-link">
@@ -224,42 +228,42 @@
                     <a href="javascript:void(0);" class="menu-link menu-toggle active">
 
                         <i data-feather="book" class="menu-icon tf-icons"></i>
-                        <span class="title">Education</span>
+                        <span class="title">About</span>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                All Education
+                            <a href="{{route('Abouts.index')}}" class="menu-link">
+                                All About
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                Create Education
+                            <a href="{{route('Abouts.create')}}" class="menu-link">
+                                Create About
                             </a>
                         </li>
                     </ul>
 
 
 
-                    {{-- Experience --}}
+                    {{-- Features --}}
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle active">
 
                         {{-- <i data-feather="award" class="menu-icon tf-icons"></i> --}}
                         <i data-feather="briefcase" class="menu-icon tf-icons"></i>
-                        <span class="title">Experience</span>
+                        <span class="title">Our Features</span>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                All Experiences
+                            <a href="{{route('Features.index')}}" class="menu-link">
+                                All Features
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                Create An Experience
+                            <a href="{{route('Features.create')}}" class="menu-link">
+                                Create An Features
                             </a>
                         </li>
                     </ul>

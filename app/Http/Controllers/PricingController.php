@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pricing;
 use Illuminate\Http\Request;
+use App\Models\PricingCategory;
 
 class PricingController extends Controller
 {
@@ -21,7 +22,8 @@ class PricingController extends Controller
     {
         $Pricing = new Pricing();
         $isUpdate = false;
-        return view('Pricings.from',compact('Pricing','isUpdate'));
+        $Categories=PricingCategory::all();
+        return view('Pricings.from',compact('Pricing','isUpdate','Categories'));
     }
 
     /**
@@ -35,7 +37,7 @@ class PricingController extends Controller
              'titre'=> 'required',
             
              'prix'=> 'required',
-             
+            'Pricing_category_id'=>'required',
              'description'=>'required',
          ]);
         
@@ -60,7 +62,8 @@ class PricingController extends Controller
     {
         $Pricing = Pricing::findOrFail($id);
         $isUpdate = true;
-        return view('Pricings.from', compact('Pricing','isUpdate'));
+           $Categories = PricingCategory::all();
+        return view('Pricings.from', compact('Pricing','isUpdate','Categories'));
     }
 
     /**
@@ -74,7 +77,7 @@ class PricingController extends Controller
              'titre'=> 'required',
             
              'prix'=> 'required',
-             
+               'Pricing_category_id'=>'required',
              'description'=>'required',
          ]);
     

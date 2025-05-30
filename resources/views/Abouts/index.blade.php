@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="d-sm-flex text-center justify-content-between align-items-center mb-4">
-        <h3 class="mb-sm-0 mb-1 fs-18">Pricing</h3>
+        <h3 class="mb-sm-0 mb-1 fs-18">About</h3>
         <ul class="ps-0 mb-0 list-unstyled d-flex justify-content-center">
             <li>
                 <a href="{{route('admin.dashboard')}}" class="text-decoration-none">
@@ -12,20 +12,20 @@
                 </a>
             </li>
             <li>
-                <span class="fw-semibold fs-14 heading-font text-dark dot ms-2">Pricing</span>
+                <span class="fw-semibold fs-14 heading-font text-dark dot ms-2">About</span>
             </li>
         </ul>
     </div>
     <div class="card bg-white border-0 rounded-10 mb-4">
         <div class="card-body p-4">
             <div class="d-flex justify-content-between align-items-center border-bottom pb-20 mb-20">
-                <h4 class="fw-semibold fs-18 mb-0">All Pricing</h4>
+                <h4 class="fw-semibold fs-18 mb-0">All About</h4>
                 <div class="d-sm-flex align-items-center">
-                    <a href="{{ route('Pricings.create') }}">
+                    <a href="{{ route('Abouts.create') }}">
                         <button class="border-0 btn btn-primary py-2 px-3 px-sm-4 text-white fs-14 fw-semibold rounded-3">
                             <span class="py-sm-1 d-block">
                                 <i class="ri-add-line text-white"></i>
-                                <span>Add Pricing</span>
+                                <span>Add About</span>
                             </span>
                         </button>
                     </a>
@@ -37,53 +37,17 @@
                         <thead>
                             <tr>
                                 
-                                <th scope="col">type</th>
-                                <th scope="col">titre</th>
-                                 <th scope="col">categorie</th>
-                                <th scope="col">description</th>
                                 <th scope="col">Listed Date</th>
                                 <th >Actions</th>
                             </tr>
 
                         </thead>
                         <tbody>
-                            @forelse ($Pricings as $item)
+                            @forelse ($Abouts as $item)
                                 <tr>
                                     
                                     
-                                    <td class="text-start">
-                                        <div class="d-flex align-items-center">
-                                           
-                                            <div class="flex-grow-1 ms-10">
-                                                <h4 class="fw-semibold fs-14 mb-0">{{$item->type}}</h4>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    
-                                    <td class="text-start">
-                                        <div class="d-flex align-items-center">
-                                           
-                                            <div class="flex-grow-1 ms-10">
-                                                <h4 class="fw-semibold fs-14 mb-0">{{$item->titre}}</h4>
-                                            </div>
-                                        </div>
-                                    </td>
-                                      <td class="text-start">
-                                        <div class="d-flex align-items-center">
-                                           
-                                            <div class="flex-grow-1 ms-10">
-                                                <h4 class="fw-semibold fs-14 mb-0">{{$item->categorie__Pricing->name}}</h4>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="text-start">
-                                        <div class="d-flex align-items-center">
-                                           
-                                            <div class="flex-grow-1 ms-10">
-                                                <h4 class="fw-semibold fs-14 mb-0">{!! $item->description !!}</h4>
-                                            </div>
-                                        </div>
-                                    </td>
+                               
                                     <td class="text-start">
                                         <div class="d-flex align-items-center">
                                            
@@ -102,7 +66,7 @@
                                             <ul class="dropdown-menu dropdown-menu-end bg-white border box-shadow">
                                                 
                                                 <li>
-                                                    <a class="dropdown-item" href="{{ route('Pricings.edit', $item->id) }}">
+                                                    <a class="dropdown-item" href="{{ route('Abouts.edit', $item->id) }}">
                                                         <i data-feather="edit-3"></i>
                                                         Rename
                                                     </a>
@@ -110,7 +74,7 @@
                                                
                                                 <li>
                                                    
-                                                    <form action="{{ route('Pricings.destroy', $item) }}" method="POST" class="dropdown-item" >
+                                                    <form action="{{ route('Abouts.destroy', $item) }}" method="POST" class="dropdown-item" >
                                                         @csrf
                                                         @method('DELETE')
                                                       

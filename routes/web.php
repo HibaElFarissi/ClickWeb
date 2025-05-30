@@ -3,13 +3,18 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\VideosController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DemandeController;
+use App\Http\Controllers\DesignsController;
+use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\PricingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
@@ -19,10 +24,7 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\VideoCategoryController;
 use App\Http\Controllers\DesignCategoryController;
 use App\Http\Controllers\ArticleCategoryController;
-use App\Http\Controllers\BlogController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\DesignsController;
-use App\Http\Controllers\VideosController;
+use App\Http\Controllers\PricingCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +44,7 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 // Pages:
 Route::resource('logo', LogoController::class);
 Route::get('About', [AboutController::class, 'Affichage'])->name('About');
+Route::get('Faq', [FaqController::class, 'Affichage'])->name('Faq');
 Route::get('Service', [ServiceController::class, 'Affichage'])->name('Service');
 Route::get('Projects', [ProjectsController::class,'Affichage'])->name('Projects');
 Route::get('Designs', [DesignsController::class,'Affichage'])->name('Designs');
@@ -63,8 +66,8 @@ Route::resource('Videos_all', VideosController::class);
 Route::resource('VideoCategory',VideoCategoryController::class);
 Route::resource('Projects_all', ProjectsController::class);
 Route::resource('Categories', CategoriesController::class);
-
-
+Route::resource('PricingCategory',PricingCategoryController::class);
+Route::resource('Abouts', AboutController::class);
 Route::resource('Tags', TagController::class);
 
 Route::resource('Demande', DemandeController::class);
@@ -72,7 +75,7 @@ Route::resource('Pricings', PricingController::class);
 Route::resource('Teams', TeamController::class);
 Route::resource('Faqs', FaqController::class);
 Route::resource('Feedback', FeedbackController::class);
-
+Route::resource('Features', FeatureController::class);
 
 
 

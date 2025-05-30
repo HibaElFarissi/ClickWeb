@@ -17,6 +17,8 @@ return new class extends Migration
               $table->string('titre');
                $table->string('prix');
                 $table->longText('description');
+                  $table->unsignedBigInteger('Pricing_category_id');
+            $table->foreign('Pricing_category_id')->references('id')->on('Pricing_categories')->onDelete('cascade');
             $table->timestamps();
         });
     }

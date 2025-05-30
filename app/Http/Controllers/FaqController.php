@@ -13,6 +13,11 @@ class FaqController extends Controller
         $this->middleware(['auth','role:admin']);
        
     }
+    public function Affichage()
+    {
+          $Faqs = Faq::all();
+         return view('pages.FAQ', compact('Faqs'));
+    }
     public function index()
     {
         $Faqs = Faq::all();
