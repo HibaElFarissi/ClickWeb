@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class FaqController extends Controller
@@ -16,7 +17,8 @@ class FaqController extends Controller
     public function Affichage()
     {
           $Faqs = Faq::all();
-         return view('pages.FAQ', compact('Faqs'));
+          $Testimonials = Testimonial::all();
+         return view('pages.FAQ', compact('Faqs','Testimonials'));
     }
     public function index()
     {

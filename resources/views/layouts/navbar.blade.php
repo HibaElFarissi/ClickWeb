@@ -323,24 +323,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-brands">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 v-center">
-                    <h5 class="mb10">Top App Development Companies</h5>
-                    <p>News letter dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Enter your email</p>
-                </div>
-                <div class="col-lg-8 v-center">
-                    <ul class="footer-badges-">
-                        <li><a href="#"><img src="{{ asset('Frontend/images/about/badges-a.png') }}" alt="badges"></a></li>
-                        <li><a href="#"><img src="{{ asset('Frontend/images/about/badges-b.png') }}" alt="badges"></a></li>
-                        <li><a href="#"><img src="{{ asset('Frontend/images/about/badges-c.png') }}" alt="badges"></a></li>
-                        <li><a href="#"><img src="{{ asset('Frontend/images/about/badges-d.png') }}" alt="badges"></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <div class="footer-row3">
         <div class="copyright">
             <div class="container">

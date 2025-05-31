@@ -1,0 +1,65 @@
+@extends('layouts.DashAdmin_nav')
+@section('content')
+    <form class="row g-3 needs-validation" action="{{ route('Testimonials.update', $Testimonial->id) }}" method="POST"
+        enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
+        <div class="col-mb-12">
+            <label for="validationCustom10" class="form-label label">name</label>
+            <div class="position-relative">
+                <input type="text" class="form-control h-58 @error('name') is-invalid @enderror" name="name"
+                    id="validationCustom10" value="{{ old('name', $Testimonial->name) }}" required>
+
+            </div>
+            @error('name')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="col-mb-12">
+            <label for="validationCustom10" class="form-label label">work</label>
+            <div class="position-relative">
+                <input type="text" class="form-control h-58 @error('work') is-invalid @enderror" name="work"
+                    id="validationCustom10" value="{{ old('work', $Testimonial->work) }}" required>
+
+            </div>
+            @error('work')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
+        </div>
+        <div class="col-mb-12">
+            <label for="validationCustom18" class="form-label label">Reviews:</label>
+            <div class="position-relative">
+                <textarea cols="30" name="Reviews" rows="5" class="form-control py-3 @error('Reviews') is-invalid @enderror"
+                    id="Reviews" placeholder="Reviews" required>{{ old('Reviews', $Testimonial->Reviews) }}</textarea>
+
+            </div>
+            @error('Reviews')
+                <div class="text-danger">{{ $message }} </div>
+            @enderror
+        </div>
+        <div class="form-group mb-12">
+            <div class="form-group">
+                <label class="label">File Upload photo</label>
+                <div class="form-control h-100 text-center position-relative p-4 p-lg-5">
+                    <div class="product-upload">
+                        <label for="photo" class="file-upload mb-0">
+                            <i class="ri-upload-cloud-2-line fs-2 text-gray-light"></i>
+                            <span class="d-block fw-semibold text-body">Drop files here or click to
+                                upload.</span>
+                        </label>
+                        <input id="photo" class="@error('photo') is-invalid @enderror" type="file" name="photo">
+
+                    </div>
+                    @error('photo')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                </div>
+                <br> <br> <br>
+                <div class="col-12">
+                    <button class="btn btn-primary fw-semibold text-white py-2 px-3" type="submit">Edit
+                        Testimonial</button>
+                </div>
+    </form>
+    <br>
+    <br>
+@endsection

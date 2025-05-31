@@ -14,6 +14,30 @@ class ProfileController extends Controller
     /**
      * Display the user's profile form.
      */
+    public function __construct()
+    {
+     
+        $this->middleware(['auth','role:admin']);
+       
+    }
+    
+
+    public function update_password(Request $request): View
+    {
+        return view('profile.update-password', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function delete_user(Request $request): View
+    {
+        return view('profile.delete-user', [
+            'user' => $request->user(),
+        ]);
+    }
+
+   
+
     public function edit(Request $request): View
     {
         return view('profile.edit', [
@@ -26,7 +50,7 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
+         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;

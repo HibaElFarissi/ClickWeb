@@ -2,26 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Logo;
+use App\Models\Client;
 use Illuminate\Http\Request;
 
-class LogoController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-     public function index()
+   public function index()
     {
-        $Logos = Logo::all();
-        return view('Logos.index', compact('Logos'));
+        $Clients = Client::all();
+        return view('Clients.index', compact('Clients'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
-    {  $Logos = Logo::all();
-        return view('Logos.index', compact('Logos'));
+    {
+         $Clients = Client::all();
+        return view('Clients.index', compact('Clients'));
     }
 
     /**
@@ -30,7 +31,7 @@ class LogoController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-           
+            'name' => 'required',
             'photo' => 'nullable',
 
         ]);
@@ -40,14 +41,14 @@ class LogoController extends Controller
 
         // Handle photo upload
         if ($request->hasFile('photo')) {
-            $photoPath1 = $request->file('photo')->store('Logos', 'public');
+            $photoPath1 = $request->file('photo')->store('Clients', 'public');
             $validatedData['photo'] = $photoPath1;
         }
 
 
-        Logo::create($validatedData);
+        Client::create($validatedData);
 
-        return redirect()->route('Logos.index');
+        return redirect()->route('Clients.index');
     }
 
     /**
@@ -60,10 +61,10 @@ class LogoController extends Controller
      */
     public function edit(string $id)
     {
-        $Logo = Logo::findOrFail($id);
+        $Client = Client::findOrFail($id);
 
         $isUpdate = true;
-        return view('Logos.edit', compact('Logo', 'isUpdate'));
+        return view('Clients.edit', compact('Client', 'isUpdate'));
     }
 
     /**
@@ -72,21 +73,21 @@ class LogoController extends Controller
     public function update(Request $request, string $id)
     {
         $validatedData = $request->validate([
-            
+            'name' => 'required',
             'photo' => 'nullable',
         ]);
 
 
-        $Logo = Logo::findOrFail($id);
+        $Client = Client::findOrFail($id);
 
         if ($request->hasFile('photo')) {
-            $photoPath1 = $request->file('photo')->store('Logos', 'public');
+            $photoPath1 = $request->file('photo')->store('Clients', 'public');
             $validatedData['photo'] = $photoPath1;
         }
 
-        $Logo->update($validatedData);
+        $Client->update($validatedData);
 
-        return to_route('Logos.index');
+        return to_route('Clients.index');
     }
 
     /**
@@ -94,7 +95,7 @@ class LogoController extends Controller
      */
     public function destroy(string $id)
     {
-        Logo::findOrFail($id)->delete();
-        return to_route('Logos.index');
+        Client::findOrFail($id)->delete();
+        return to_route('Clients.index');
     }
 }

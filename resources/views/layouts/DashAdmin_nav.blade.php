@@ -81,13 +81,13 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{route('Logos.index')}}" class="menu-link">
                                 Show logo
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{route('Logos.create')}}" class="menu-link">
                                 Create logo
                             </a>
                         </li>
@@ -151,17 +151,17 @@
                     <a href="javascript:void(0);" class="menu-link menu-toggle active">
                         {{-- <i data-feather="message-square" class="menu-icon tf-icons"></i> --}}
                         <i data-feather="flag" class="menu-icon tf-icons"></i>
-                        <span class="title">Banners</span>
+                        <span class="title">Clients</span>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                Banner Show
+                            <a href="{{route('Clients.index')}}" class="menu-link">
+                                all Clients
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                Create
+                            <a href="{{route('Clients.create')}}" class="menu-link">
+                                Create Client
                             </a>
                         </li>
                     </ul>
@@ -279,12 +279,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{route('Testimonials.index')}}" class="menu-link">
                                 feedback
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{route('Testimonials.create')}}" class="menu-link">
                                 Create feedback
                             </a>
                         </li>
@@ -510,23 +510,19 @@
                         <span class="title">Settings</span>
                     </a>
                     <ul class="menu-sub">
+                       
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                Profile
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{route('profile.edit')}}" class="menu-link">
                                 Account
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{route('update_password')}}" class="menu-link">
                                 Security
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{route('delete_user')}}" class="menu-link">
                                 Delete
                             </a>
                         </li>

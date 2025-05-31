@@ -2,26 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Logo;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
-class LogoController extends Controller
+class TestimonialController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-     public function index()
+    public function index()
     {
-        $Logos = Logo::all();
-        return view('Logos.index', compact('Logos'));
+        $Testimonials = Testimonial::all();
+        return view('Testimonials.index', compact('Testimonials'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
-    {  $Logos = Logo::all();
-        return view('Logos.index', compact('Logos'));
+    {
+         $Testimonials = Testimonial::all();
+        return view('Testimonials.index', compact('Testimonials'));
     }
 
     /**
@@ -30,7 +31,9 @@ class LogoController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-           
+            'name' => 'required',
+            'work' => 'required',
+            'Reviews' => 'required',
             'photo' => 'nullable',
 
         ]);
@@ -40,14 +43,14 @@ class LogoController extends Controller
 
         // Handle photo upload
         if ($request->hasFile('photo')) {
-            $photoPath1 = $request->file('photo')->store('Logos', 'public');
+            $photoPath1 = $request->file('photo')->store('Testimonials', 'public');
             $validatedData['photo'] = $photoPath1;
         }
 
 
-        Logo::create($validatedData);
+        Testimonial::create($validatedData);
 
-        return redirect()->route('Logos.index');
+        return redirect()->route('Testimonials.index');
     }
 
     /**
@@ -60,10 +63,10 @@ class LogoController extends Controller
      */
     public function edit(string $id)
     {
-        $Logo = Logo::findOrFail($id);
+        $Testimonial = Testimonial::findOrFail($id);
 
         $isUpdate = true;
-        return view('Logos.edit', compact('Logo', 'isUpdate'));
+        return view('Testimonials.edit', compact('Testimonial', 'isUpdate'));
     }
 
     /**
@@ -72,21 +75,23 @@ class LogoController extends Controller
     public function update(Request $request, string $id)
     {
         $validatedData = $request->validate([
-            
+            'name' => 'required',
+            'work' => 'required',
+            'Reviews' => 'required',
             'photo' => 'nullable',
         ]);
 
 
-        $Logo = Logo::findOrFail($id);
+        $Testimonial = Testimonial::findOrFail($id);
 
         if ($request->hasFile('photo')) {
-            $photoPath1 = $request->file('photo')->store('Logos', 'public');
+            $photoPath1 = $request->file('photo')->store('Testimonials', 'public');
             $validatedData['photo'] = $photoPath1;
         }
 
-        $Logo->update($validatedData);
+        $Testimonial->update($validatedData);
 
-        return to_route('Logos.index');
+        return to_route('Testimonials.index');
     }
 
     /**
@@ -94,7 +99,7 @@ class LogoController extends Controller
      */
     public function destroy(string $id)
     {
-        Logo::findOrFail($id)->delete();
-        return to_route('Logos.index');
+        Testimonial::findOrFail($id)->delete();
+        return to_route('Testimonials.index');
     }
 }

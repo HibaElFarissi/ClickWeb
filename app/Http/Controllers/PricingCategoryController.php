@@ -19,7 +19,8 @@ class PricingCategoryController extends Controller
      */
     public function create()
     {
-        return view('PricingCategory.index');
+         $Categorie_Pricings=PricingCategory::all();
+        return view('PricingCategory.index', compact('Categorie_Pricings'));
     }
 
     /**
