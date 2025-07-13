@@ -235,46 +235,53 @@
                     </div>
                 @endforeach
             </div>
-            <div class="row justify-content-center mt60">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        @foreach ($Abouts as $item)
+               
+        </div>
+    </section>
+    <!--End Team-->
+           
+    <!--Stat Projects-->
+    <section class="featured-project pad-tb">
+        <div class="container">
+            <div class="row justify-content-center">
+                   @foreach ($Abouts as $item)
                             <div class="col-lg-8">
                                 <div class="common-heading ptag">
-                                    <span>Pricing</span>
+                                    <span>Projects</span>
                                     <h2>{{ $item->title_project }} </h2>
                                     <p class="mb0">{{ $item->slug_project }} </p>
                                 </div>
                             </div>
                         @endforeach
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-5 mt30 h-scl-">
-                            <div class="img-ca2set h-scl-base"><img
-                                    src="{{ asset('Frontend/images/about/office-1.jpg') }}" alt="companyname"
-                                    class="img-fluid w-100"></div>
-                        </div>
-                        <div class="col-lg-7 mt30 h-scl-">
-                            <div class="img-ca2set h-scl-base"><img
-                                    src="{{ asset('Frontend/images/about/office-2.jpg') }}" alt="companyname"
-                                    class="img-fluid w-100"></div>
-                        </div>
-                        <div class="col-lg-7 mt30 h-scl-">
-                            <div class="img-ca2set h-scl-base"><img
-                                    src="{{ asset('Frontend/images/about/office-3.jpg') }}" alt="companyname"
-                                    class="img-fluid w-100"></div>
-                        </div>
-                        <div class="col-lg-5 mt30 h-scl-">
-                            <div class="img-ca2set h-scl-base"><img
-                                    src="{{ asset('Frontend/images/about/office-4.jpg') }}" alt="companyname"
-                                    class="img-fluid w-100"></div>
+            </div>
+            <div class="row">
+                @foreach ($projects as $item)
+                    <div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="isotope_item hover-scale">
+                            <div class="item-image">
+                                <a href="{{ route('projects.show', $item) }}"><img src="{{ asset('storage/' . $item->photo) }}" alt="portfolio"
+                                        class="img-fluid" /> </a>
+                            </div>
+                            <div class="item-info">
+                                <h4><a href="{{ route('projects.show', $item) }}">{{ $item->name }} </a></h4>
+                                
+                                <p>{{ $item->categorie->name }}</p>
+                            </div>
                         </div>
                     </div>
+                @endforeach
+
+            </div>
+            <div class="row">
+                <div class="col-lg-12 maga-btn mt60">
+                    <a href="{{ route('Project') }}" class="btn-outline">View More Projects <i
+                            class="fas fa-chevron-right fa-icon"></i></a>
                 </div>
             </div>
         </div>
     </section>
-    <!--End Team-->
+    <!--End Projects-->
+ 
     <!--Start Pricing-->
     <section class="block-a1 pad-tb">
         <div class="container">
@@ -289,71 +296,68 @@
                 </div>
                 <div class="col-lg-6 v-center">
                     <div class="filters">
-                         <ul class="filter-menu">
-            <li data-filter="all" class="is-checked">All</li>
-            @php $tabId = 1; @endphp
-            @foreach ($Pricings_item as $item)
-                <li data-filter="tab-{{ $tabId }}">{{ $item->name }}</li>
-                @php $tabId++; @endphp
-            @endforeach
-        </ul>
-                        
+                        <ul class="filter-menu">
+                            <li data-filter="all" class="is-checked">All</li>
+                            @php $tabId = 1; @endphp
+                            @foreach ($Pricings_item as $item)
+                                <li data-filter="tab-{{ $tabId }}">{{ $item->name }}</li>
+                                @php $tabId++; @endphp
+                            @endforeach
+                        </ul>
+
 
                     </div>
                 </div>
             </div>
-          
-         <div class="row justify-content-center">
-    @php $tabId = 1; @endphp
-    @foreach ($Pricings_item as $item)
-        @if (!is_null($item->pricing) && $item->pricing->isNotEmpty())
-            @foreach ($item->pricing as $plan)
-                <div class="col-lg-4 col-md-6 pricing-item tab-{{ $tabId }}">
-                    <div class="pricing-table mt60">
-                        <div class="inner-table">
-                            <img src="{{ asset('FrontEnd/images/icons/plan-1.svg') }}" alt="Plan" />
-                            <span class="title">{{ $plan->type }}</span>
-                            <p class="title-sub">{{ $plan->titre }}</p>
-                            <h2><sup>$</sup> {{ $plan->prix }}</h2>
-                            <p class="duration">Monthly Package</p>
-                            <div class="details">{!! $plan->description !!}</div>
-                        </div>
-                        <a href="#" class="btn-main bg-btn lnk">Get Started <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-                    </div>
-                </div>
-            @endforeach
-        @endif
-        @php $tabId++; @endphp
-    @endforeach
-</div>
+
+            <div class="row justify-content-center">
+                @php $tabId = 1; @endphp
+                @foreach ($Pricings_item as $item)
+                    @if (!is_null($item->pricing) && $item->pricing->isNotEmpty())
+                        @foreach ($item->pricing as $plan)
+                            <div class="col-lg-4 col-md-6 pricing-item tab-{{ $tabId }}">
+                                <div class="pricing-table mt60">
+                                    <div class="inner-table">
+                                        <img src="{{ asset('FrontEnd/images/icons/plan-1.svg') }}" alt="Plan" />
+                                        <span class="title">{{ $plan->type }}</span>
+                                        <p class="title-sub">{{ $plan->titre }}</p>
+                                        <h2><sup>$</sup> {{ $plan->prix }}</h2>
+                                        <p class="duration">Monthly Package</p>
+                                        <div class="details">{!! $plan->description !!}</div>
+                                    </div>
+                                    <a href="#" class="btn-main bg-btn lnk">Get Started <i
+                                            class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+                    @php $tabId++; @endphp
+                @endforeach
+            </div>
         </div>
     </section>
     <!--End Pricing-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.filter-menu li').on('click', function () {
-            let filter = $(this).data('filter');
+    <script>
+        $(document).ready(function() {
+            $('.filter-menu li').on('click', function() {
+                let filter = $(this).data('filter');
 
-            // Set active class
-            $('.filter-menu li').removeClass('is-checked');
-            $(this).addClass('is-checked');
+                // Set active class
+                $('.filter-menu li').removeClass('is-checked');
+                $(this).addClass('is-checked');
 
-            // Show/hide pricing items
-            if (filter === 'all') {
-                $('.pricing-item').show();
-            } else {
-                $('.pricing-item').hide();
-                $('.' + filter).show();
-            }
+                // Show/hide pricing items
+                if (filter === 'all') {
+                    $('.pricing-item').show();
+                } else {
+                    $('.pricing-item').hide();
+                    $('.' + filter).show();
+                }
+            });
+
+            // Show all by default
+            $('.pricing-item').show();
         });
-
-        // Show all by default
-        $('.pricing-item').show();
-    });
-</script>
-
+    </script>
 @endsection
-
-
-

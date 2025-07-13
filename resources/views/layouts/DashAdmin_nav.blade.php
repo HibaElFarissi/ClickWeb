@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.js"></script>
     <!-- FontAwesome -->
@@ -81,13 +86,13 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="{{route('Logos.index')}}" class="menu-link">
+                            <a href="{{ route('Logos.index') }}" class="menu-link">
                                 Show logo
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="{{route('Logos.create')}}" class="menu-link">
+                            <a href="{{ route('Logos.create') }}" class="menu-link">
                                 Create logo
                             </a>
                         </li>
@@ -106,12 +111,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('infos.index') }}" class="menu-link">
                                 All infos
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('infos.create') }}" class="menu-link">
                                 Create an info
                             </a>
                         </li>
@@ -125,7 +130,23 @@
                     <span class="menu-title-text">PAGES</span>
                 </li>
 
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle active">
 
+                        {{-- <i data-feather="award" class="menu-icon tf-icons"></i> --}}
+                        <i data-feather="briefcase" class="menu-icon tf-icons"></i>
+                        <span class="title">Demande Devis</span>
+                    </a>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="{{ route('Demande.index') }}" class="menu-link">
+                                All Demandes
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </li>
                 {{-- Email --}}
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle active">
@@ -134,12 +155,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Contacts.index') }}" class="menu-link">
                                 Inbox
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Newsletters.index') }}" class="menu-link">
                                 Newsletters
                             </a>
                         </li>
@@ -155,12 +176,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="{{route('Clients.index')}}" class="menu-link">
+                            <a href="{{ route('Clients.index') }}" class="menu-link">
                                 all Clients
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{route('Clients.create')}}" class="menu-link">
+                            <a href="{{ route('Clients.create') }}" class="menu-link">
                                 Create Client
                             </a>
                         </li>
@@ -177,26 +198,26 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="{{route('ArticleCategorys.index')}}" class="menu-link">
+                            <a href="{{ route('ArticleCategorys.index') }}" class="menu-link">
                                 Article Category
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="{{route('Articles.index')}}" class="menu-link">
+                            <a href="{{ route('Articles.index') }}" class="menu-link">
                                 All Articles
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="{{route('Articles.create')}}" class="menu-link">
+                            <a href="{{ route('Articles.create') }}" class="menu-link">
                                 Create Article
                             </a>
                         </li>
                     </ul>
 
                 </li>
-                      <li class="menu-item">
+                <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle active">
 
                         {{-- <i data-feather="align-left" class="menu-icon tf-icons"></i> --}}
@@ -204,20 +225,20 @@
                         <span class="title">Pricings</span>
                     </a>
                     <ul class="menu-sub">
-                      <li class="menu-item">
-                            <a href="{{route('PricingCategory.index')}}" class="menu-link">
+                        <li class="menu-item">
+                            <a href="{{ route('PricingCategory.index') }}" class="menu-link">
                                 Pricing Category
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="{{route('Pricings.index')}}" class="menu-link">
+                            <a href="{{ route('Pricings.index') }}" class="menu-link">
                                 All Pricings
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="{{route('Pricings.create')}}" class="menu-link">
+                            <a href="{{ route('Pricings.create') }}" class="menu-link">
                                 Create Pricing
                             </a>
                         </li>
@@ -232,13 +253,13 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="{{route('Abouts.index')}}" class="menu-link">
+                            <a href="{{ route('Abouts.index') }}" class="menu-link">
                                 All About
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="{{route('Abouts.create')}}" class="menu-link">
+                            <a href="{{ route('Abouts.create') }}" class="menu-link">
                                 Create About
                             </a>
                         </li>
@@ -256,21 +277,21 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="{{route('Features.index')}}" class="menu-link">
+                            <a href="{{ route('Features.index') }}" class="menu-link">
                                 All Features
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="{{route('Features.create')}}" class="menu-link">
+                            <a href="{{ route('Features.create') }}" class="menu-link">
                                 Create An Features
                             </a>
                         </li>
                     </ul>
+                </li>
 
 
-
-                    {{-- Testimonial --}}
+                {{-- Testimonial --}}
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle active">
 
@@ -279,12 +300,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="{{route('Testimonials.index')}}" class="menu-link">
+                            <a href="{{ route('Testimonials.index') }}" class="menu-link">
                                 feedback
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{route('Testimonials.create')}}" class="menu-link">
+                            <a href="{{ route('Testimonials.create') }}" class="menu-link">
                                 Create feedback
                             </a>
                         </li>
@@ -301,7 +322,7 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Skills.index') }}" class="menu-link">
                                 All skills
                             </a>
                         </li>
@@ -317,7 +338,7 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Skills-Types.index') }}" class="menu-link">
                                 Type Skills
                             </a>
                         </li>
@@ -333,7 +354,7 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Tags.index') }}" class="menu-link">
                                 All Tags
                             </a>
                         </li>
@@ -349,12 +370,12 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Services.index') }}" class="menu-link">
                                 Show Services
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Services.create') }}" class="menu-link">
                                 Create
                             </a>
                         </li>
@@ -380,18 +401,28 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Teams.index') }}" class="menu-link">
+                                All Teams
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{ route('Tags.index') }}" class="menu-link">
+                                All Tags
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{ route('Categories.index') }}" class="menu-link">
                                 All Categories
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('projects.index') }}" class="menu-link">
                                 All Projects
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('projects.create') }}" class="menu-link">
                                 Create
                             </a>
                         </li>
@@ -403,14 +434,14 @@
                         <span class="title">Faqs</span>
                     </a>
                     <ul class="menu-sub">
-                        
+
                         <li class="menu-item">
-                            <a href="{{route('Faqs.index')}}" class="menu-link">
+                            <a href="{{ route('Faqs.index') }}" class="menu-link">
                                 All Faqs
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{route('Faqs.create')}}" class="menu-link">
+                            <a href="{{ route('Faqs.create') }}" class="menu-link">
                                 Create Faq
                             </a>
                         </li>
@@ -425,13 +456,13 @@
                     <ul class="menu-sub">
 
                         <li class="menu-item">
-                            <a href="{{route('Teams.index')}}" class="menu-link">
+                            <a href="{{ route('Teams.index') }}" class="menu-link">
                                 All Members
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="{{route('Teams.create')}}" class="menu-link">
+                            <a href="{{ route('Teams.create') }}" class="menu-link">
                                 Create Member
                             </a>
                         </li>
@@ -448,19 +479,19 @@
                     <ul class="menu-sub">
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Categorie_Designs.index') }}" class="menu-link">
                                 Design Category
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Designs.index') }}" class="menu-link">
                                 All Designs
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Designs.create') }}" class="menu-link">
                                 Create Design
                             </a>
                         </li>
@@ -477,19 +508,19 @@
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Categorie_Videos.index') }}" class="menu-link">
                                 Video Category
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Videos.index') }}" class="menu-link">
                                 All Videos
                             </a>
                         </li>
 
                         <li class="menu-item">
-                            <a href="#" class="menu-link">
+                            <a href="{{ route('Videos.create') }}" class="menu-link">
                                 Create Video
                             </a>
                         </li>
@@ -510,19 +541,19 @@
                         <span class="title">Settings</span>
                     </a>
                     <ul class="menu-sub">
-                       
+
                         <li class="menu-item">
-                            <a href="{{route('profile.edit')}}" class="menu-link">
+                            <a href="{{ route('profile.edit') }}" class="menu-link">
                                 Account
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{route('update_password')}}" class="menu-link">
+                            <a href="{{ route('update_password') }}" class="menu-link">
                                 Security
                             </a>
                         </li>
                         <li class="menu-item">
-                            <a href="{{route('delete_user')}}" class="menu-link">
+                            <a href="{{ route('delete_user') }}" class="menu-link">
                                 Delete
                             </a>
                         </li>

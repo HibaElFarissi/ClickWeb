@@ -2,67 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Design;
 use Illuminate\Http\Request;
+use App\Models\Categorie_Design;
 
 class DesignsController extends Controller
 {
-    public function Affichage()
-    {
-        //
-        return view('pages.Designs');
-    }
+ 
 
-    public function index()
-    {
-        //
-    }
+    public function Affichage(Request $request){
+     
+        $Designs=Design::latest()->get();
+        $Design_item = Categorie_Design::with('designs')->get();
+        return view('pages.Designs',compact('Designs', 'Design_item'));
+       }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    
 }
 

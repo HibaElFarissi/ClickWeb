@@ -2,66 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Video;
+use App\Models\Categorie_Video;
 use Illuminate\Http\Request;
 
 class VideosController extends Controller
 {
-    public function Affichage()
-    {
-        //
-        return view('pages.Videos');
-    }
     
-    public function index()
-    {
-        //
-    }
+   public function Affichage(Request $request){
+        
+        $Videos=Video::latest()->get();
+        $Video_item = Categorie_Video::with('video')->get();
+        return view('pages.Videos',compact('Videos','Video_item'));
+       }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    
 }

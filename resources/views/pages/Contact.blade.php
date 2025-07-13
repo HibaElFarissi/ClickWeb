@@ -8,7 +8,7 @@
 							<div class="bread-inner">
 								<div class="bread-menu wow fadeInUp" data-wow-delay=".2s">
 									<ul>
-										<li><a href="index.html">Home</a></li>
+										<li><a href="/">Home</a></li>
 										<li><a href="#">Contact</a></li>
 									</ul>
 								</div>
@@ -76,34 +76,31 @@
 							<p class="mb60 mt10">We will catch you as early as we receive the message</p>
 						</div>
 						<div class="form-block">
-							<form id="contactForm" data-bs-toggle="validator" class="shake">
+							  <form action="{{ route('Contacts.store') }}" method="POST" enctype="multipart/form-data"  class="shake">
+                        @csrf
+
 								<div class="row">
 									<div class="form-group col-sm-6">
-										<input type="text"  id="name" placeholder="Enter name" required data-error="Please fill Out">
+										<input type="text" name="name" id="name" placeholder="Enter name" required data-error="Please fill Out">
 										<div class="help-block with-errors"></div>
 									</div>
 									<div class="form-group col-sm-6">
-										<input type="email"  id="email" placeholder="Enter email" required>
+										<input type="email" name="email"  id="email" placeholder="Enter email" required>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="row">
 									<div class="form-group col-sm-6">
-										<input type="text" id="mobile" placeholder="Enter mobile" required data-error="Please fill Out">
+										<input type="text" name="mobile" id="mobile" placeholder="Enter mobile" required data-error="Please fill Out">
 										<div class="help-block with-errors"></div>
 									</div>
 									<div class="form-group col-sm-6">
-										<select name="Dtype" id="Dtype" required>
-											<option value="">Select Requirement</option>
-											<option value="web">web</option>
-											<option value="graphic">graphic</option>
-											<option value="video">video</option>
-										</select>
+										<input type="text" name="subject" id="subject" placeholder="Enter subject" required>
 										<div class="help-block with-errors"></div>
 									</div>
 								</div>
 								<div class="form-group">
-									<textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+									<textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
 									<div class="help-block with-errors"></div>
 								</div>
 								<div class="custom-control custom-checkbox">
@@ -127,19 +124,6 @@
 
 
 		<!--Start Location-->
-		<div class="contact-location">
-			<div class="container-fluid">
-
-				<div class="row justify-content-center">
-					<div class="col-lg-12">
-						<div class="map-div">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113874.29338087817!2d75.72051791246247!3d26.885346595411875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1611838825763!5m2!1sen!2sin" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-						</div>
-					</div>
-				</div>
-
-
-			</div>
-		</div>
+		
 		<!--End Location-->
 @endsection

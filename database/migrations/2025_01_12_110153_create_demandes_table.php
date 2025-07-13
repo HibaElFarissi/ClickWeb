@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('demandes', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('Full_name');
+            $table->string('Telephone');
+            $table->string('Email');
+            $table->string('Site')->nullable();
+            $table->string('contactez_nous');
+            $table->string('investissement');
+            
+             $table->longText('Message');
+             $table->timestamps();
         });
     }
 

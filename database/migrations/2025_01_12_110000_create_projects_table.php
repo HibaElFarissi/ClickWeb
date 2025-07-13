@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+              $table->string('name');
+            $table->text('images')->nullable();
+            $table->text('description');
+            $table->string('Client');
+            $table->string('View_website');
+            $table->date('Start_Date');
+            $table->date('date_final');
+            $table->string('photo')->nullable();
+            $table->unsignedBigInteger('Categorie_id')->index();
+            $table->foreign('Categorie_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

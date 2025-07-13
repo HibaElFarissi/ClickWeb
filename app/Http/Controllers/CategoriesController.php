@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categorie;
 use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
@@ -9,9 +10,16 @@ class CategoriesController extends Controller
     /**
      * Display a listing of the resource.
      */
+       public function __construct()
+    {
+     
+        $this->middleware(['auth','role:admin']);
+       
+    }
     public function index()
     {
-        //
+        $Categories=categorie::all();
+        return view('Categories.index' , compact('Categories'));
     }
 
     /**
@@ -19,7 +27,7 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        //
+        return view('Categories.index');
     }
 
     /**
@@ -27,7 +35,16 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name'=> 'required',
+        ]);
+        
+        
+
+  
+        categorie::create($validatedData);
+    
+        return redirect()->route('Categories.index');
     }
 
     /**
@@ -35,7 +52,10 @@ class CategoriesController extends Controller
      */
     public function show(string $id)
     {
-        //
+        // $Categories=Categorie::paginate(2);
+        // $Post=Categorie::paginate(4);
+        // $Categorie = Categorie::findOrFail($id);
+        // return view('Categories.show', compact('Categorie','Categories','Post'));
     }
 
     /**
@@ -43,7 +63,8 @@ class CategoriesController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $Categorie = categorie::findOrFail($id);
+        return view('Categories.edit', compact('Categorie'));
     }
 
     /**
@@ -51,7 +72,16 @@ class CategoriesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validatedData=$request->validate([
+            'name'=> 'required',
+            
+           
+
+        ]);
+        $Categorie=categorie::findOrFail($id);
+        $Categorie->update($validatedData);
+     
+        return to_route('Categories.index');
     }
 
     /**
@@ -59,6 +89,7 @@ class CategoriesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        categorie::findOrFail($id)->delete();
+        return to_route('Categories.index');
     }
 }

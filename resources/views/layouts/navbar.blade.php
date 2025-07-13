@@ -60,9 +60,9 @@
                               <div class="sub-menu-center-block">
                                 <div class="sub-menu-column smfull">
                                     <ul>
-                                       <li><a href="{{route('Projects')}}">Creating Websites</a></li>
-                                       <li><a href="{{route('Designs')}}">Designs</a></li>
-                                       <li><a href="{{route('Videos')}}">Videos</a></li>
+                                       <li><a href="{{route('Project')}}">Creating Websites</a></li>
+                                       <li><a href="{{route('Designs_all')}}">Designs</a></li>
+                                       <li><a href="{{route('Videos_all')}}">Videos</a></li>
                                     </ul>
                     </div>
 				 </li>
@@ -77,7 +77,7 @@
               <!-- mobile + desktop - sidebar menu- dark mode witch and button -->
               <ul class="nav-list right-end-btn">
               <li class="hidemobile"><a data-bs-toggle="offcanvas" href="#offcanvasExample" class="btn-round- btn-br bg-btn2"><i class="fas fa-phone-alt"></i></a></li>
-              <li class="hidemobile"><a href="get-quote.html" class="btn-br bg-btn3 btshad-b2 lnk">Request A Quote <span class="circle"></span></a> </li>
+              <li class="hidemobile"><a href="{{ route('Demande.create') }}" class="btn-br bg-btn3 btshad-b2 lnk">Demande Devis <span class="circle"></span></a> </li>
               <li class="hidedesktop darkmodeswitch"><div class="switch-wrapper"> <label class="switch" for="niwax"> <input type="checkbox" id="niwax"/>  <span class="slider round"></span> </label> </div> </li>
               <li class="hidedesktop"><a data-bs-toggle="offcanvas" href="#offcanvasExample" class="btn-round- btn-br bg-btn2"><i class="fas fa-phone-alt"></i></a></li>
               <li class="navm- hidedesktop"> <a class="toggle" href="#"><span></span></a></li>
@@ -101,13 +101,13 @@
 				<a href="#">Réferences</a>
                     <ul>
                         <li>
-                            <a href="{{route('Projects')}}">Websites</a>
+                            <a href="{{route('Project')}}">Websites</a>
                         </li>
                         <li>
-                            <a href="{{route('Designs')}}">Designs</a>
+                            <a href="{{route('Designs_all')}}">Designs</a>
                         </li>
                         <li>
-                            <a href="{{route('Videos')}}">Videos</a>
+                            <a href="{{route('Videos_all')}}">Videos</a>
                         </li>
                     </ul>
 			  </li>
@@ -159,42 +159,82 @@
 	  <div class="btnclose"> <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
 	</div>
 	<div class="form-block sidebarform">
-	  <h4>Request A Quote</h4>
-	  <form id="contactForm" data-bs-toggle="validator" class="shake mt20">
-		<div class="row">
-		  <div class="form-group col-sm-12">
-			<input type="text"  id="name" placeholder="Enter name" required data-error="Please fill Out">
-			<div class="help-block with-errors"></div>
-		  </div>
-		  <div class="form-group col-sm-12">
-			<input type="email"  id="email" placeholder="Enter email" required>
-			<div class="help-block with-errors"></div>
-		  </div>
-		</div>
-		<div class="row">
-		  <div class="form-group col-sm-12">
-			<input type="text" id="mobile" placeholder="Enter mobile" required data-error="Please fill Out">
-			<div class="help-block with-errors"></div>
-		  </div>
-		  <div class="form-group col-sm-12">
-			<select name="Dtype" id="Dtype" required>
-			  <option value="">Select Requirement</option>
-			  <option value="web">web</option>
-			  <option value="graphic">graphic</option>
-			  <option value="video">video</option>
-			</select>
-			<div class="help-block with-errors"></div>
-		  </div>
-		</div>
-		<div class="form-group">
-		  <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
-		  <div class="help-block with-errors"></div>
-		</div>
-		<button type="submit" id="form-submit" class="btn lnk btn-main bg-btn">Submit <span class="circle"></span></button>
-		<div id="msgSubmit" class="h3 text-center hidden"></div>
-		<div class="clearfix"></div>
-	  </form>
-	</div>
+  <h4>Demande Devis</h4>
+  @if (session('success'))
+    <div class="alert alert-success">{{ session('success') }}</div>
+  @endif
+  <form id="contactForm" data-bs-toggle="validator" class="shake mt20" action="{{ route('Demande.store') }}" method="POST">
+    @csrf
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <input type="text" name="full_name" id="name" placeholder="Enter name" required data-error="Please fill Out" value="{{ old('full_name') }}">
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group col-sm-12">
+        <input type="email" name="email" id="email" placeholder="Enter email" required value="{{ old('email') }}">
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <input type="tel" name="telephone" id="mobile" placeholder="Enter mobile" required data-error="Please fill Out" value="{{ old('telephone') }}">
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group col-sm-12">
+        <input type="text" name="site" id="site" placeholder="Enter site (optionnel)" value="{{ old('site') }}">
+        <div class="help-block with-errors"></div>
+      </div>
+      <div class="form-group col-sm-12">
+        <select name="contactez_nous" id="Dtype" required>
+          <option value="">Pour quels besoins nous contactez nous</option>
+          <option value="ADS" {{ old('contactez_nous') == 'ADS' ? 'selected' : '' }}>ADS</option>
+          <option value="hébergement" {{ old('contactez_nous') == 'hébergement' ? 'selected' : '' }}>hébergement</option>
+          <option value="motion design" {{ old('contactez_nous') == 'motion design' ? 'selected' : '' }}>motion design</option>
+          <option value="Instagram ADS" {{ old('contactez_nous') == 'Instagram ADS' ? 'selected' : '' }}>Instagram ADS</option>
+          <option value="Facebook ADS" {{ old('contactez_nous') == 'Facebook ADS' ? 'selected' : '' }}>Facebook ADS</option>
+          <option value="Création de site web" {{ old('contactez_nous') == 'Création de site web' ? 'selected' : '' }}>Création de site web</option>
+          <option value="création maquette" {{ old('contactez_nous') == 'création maquette' ? 'selected' : '' }}>création maquette</option>
+          <option value="Animation des réseaux de sociaux" {{ old('contactez_nous') == 'Animation des réseaux de sociaux' ? 'selected' : '' }}>Animation des réseaux de sociaux</option>
+          <option value="création landing page" {{ old('contactez_nous') == 'création landing page' ? 'selected' : '' }}>création landing page</option>
+          <option value="creation site WordPress" {{ old('contactez_nous') == 'creation site WordPress' ? 'selected' : '' }}>creation site WordPress</option>
+          <option value="création Application Web" {{ old('contactez_nous') == 'création Application Web' ? 'selected' : '' }}>création Application Web</option>
+          <option value="Autre...." {{ old('contactez_nous') == 'Autre....' ? 'selected' : '' }}>Autre....</option>
+        </select>
+        <div class="help-block with-errors"></div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <select name="investissement" id="investissement" required>
+        <option value="">Quel est vôtre investissement mensuel cumulé</option>
+        <option value="600 - 1000 dh" {{ old('investissement') == '600 - 1000 dh' ? 'selected' : '' }}>600 - 1000 dh</option>
+        <option value="1500-2500 dh" {{ old('investissement') == '1500-2500 dh' ? 'selected' : '' }}>1500-2500 dh</option>
+        <option value="2500 - 4500 dh" {{ old('investissement') == '2500 - 4500 dh' ? 'selected' : '' }}>2500 - 4500 dh</option>
+        <option value="5000-8000 dh" {{ old('investissement') == '5000-8000 dh' ? 'selected' : '' }}>5000-8000 dh</option>
+        <option value="10000 - 20 000 dh" {{ old('investissement') == '10000 - 20 000 dh' ? 'selected' : '' }}>10000 - 20 000 dh</option>
+        <option value="20000 - plus" {{ old('investissement') == '20000 - plus' ? 'selected' : '' }}>20000 - plus</option>
+      </select>
+      <div class="help-block with-errors"></div>
+    </div>
+
+    <div class="form-group">
+      <textarea name="message" id="message" rows="5" placeholder="Enter your message" required>{{ old('message') }}</textarea>
+      <div class="help-block with-errors"></div>
+    </div>
+
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck" name="agree" checked required>
+      <label class="custom-control-label" for="customCheck">
+        I agree to the <a href="#">Terms &amp; Conditions</a>.
+      </label>
+    </div>
+
+    <button type="submit" id="form-submit" class="btn lnk btn-main bg-btn">Submit <span class="circle"></span></button>
+    <div id="msgSubmit" class="h3 text-center hidden"></div>
+    <div class="clearfix"></div>
+  </form>
+</div>
+
 	<div class="getintouchblock mt30">
 	  <h4>Get In Touch</h4>
 	  <p class="mt10">Please fill out the form below if you have a plan or project in mind that you'd like to share with us.</p>
@@ -257,8 +297,9 @@
                 </div>
                 <div class="col-lg-6 v-center">
                     <div class="email-subs-form">
-                        <form>
-                            <input type="email" placeholder="Email Your Address" name="emails">
+                        <form action="{{ route('Newsletters.store') }}" method="POST" enctype="multipart/form-data"  >
+                        @csrf
+                            <input type="email" name="email" placeholder="Email Your Address" name="emails">
                             <button type="submit" name="submit" class="lnk btn-main bg-btn">Subscribe <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></button>
                         </form>
                     </div>
@@ -503,7 +544,7 @@
                                             </li>
                                             <li><a href="/Service">Services</a>
                                             </li>
-                                            <li><a href="/Projects">Protolio</a>
+                                            <li><a href="/Project">Protolio</a>
                                             </li>
                                             <li><a href="/Blog">Blog</a>
                                             </li>
@@ -655,7 +696,7 @@
                             <li><a href="/">Home</a></li>
                             <li><a href="{{ url('About') }}">About Me</a></li>
                             <li><a href="{{ url('Service') }}">Services</a></li>
-                            <li><a href="{{ url('Projects') }}">Protfolio</a></li>
+                            <li><a href="{{ url('Project') }}">Protfolio</a></li>
                             <li><a href="{{ url('Blog') }}">Blog</a></li>
                         </ul>
                     </div>

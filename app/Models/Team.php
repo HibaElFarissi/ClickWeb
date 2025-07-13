@@ -20,5 +20,8 @@ class Team extends Model
         'numero',
         'competitions',
     ];
-    
+      public function projects()
+    {
+        return $this->belongsToMany(Project::class);
+    }
 }

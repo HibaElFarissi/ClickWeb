@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -13,9 +14,17 @@ class ContactController extends Controller
         return view('pages.Contact');
     }
 
+     public function __construct()
+    {
+     
+        $this->middleware(['auth','role:admin'])->except(['create','store','Affichage']);
+       
+    }
     public function index()
     {
-        //
+       
+        $Contacts = Contact::all();
+        return view('Contacts.index', compact('Contacts'));
     }
 
     /**
@@ -23,47 +32,32 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.Contact');
     }
+
+   
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email'=> 'required',
+            'mobile'=> 'required',
+            'subject'=> 'nullable',
+            'message'=> 'required',
+        ]);
+        Contact::create($validatedData);
+        return redirect()->route('Contact');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
+    
     public function destroy(string $id)
     {
-        //
+        Contact::findOrFail($id)->delete();
+        return to_route('Contacts.index');
     }
 }
 

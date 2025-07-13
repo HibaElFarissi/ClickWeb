@@ -6,6 +6,7 @@ use App\Models\Team;
 use App\Models\About;
 use App\Models\Feature;
 use App\Models\Pricing;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Models\PricingCategory;
 
@@ -21,9 +22,10 @@ class AboutController extends Controller
         $Features=Feature::all();
         $Teams=Team::all();
         $Abouts=About::all();
+        $projects=Project::latest()->paginate(6);
          $Pricings=Pricing::all();
          $Pricings_item = PricingCategory::with('pricing')->get();
-        return view('Pages.About' , compact('Abouts','Features','Teams','Pricings','Pricings_item'));
+        return view('Pages.About' , compact('Abouts','Features','Teams','Pricings','Pricings_item' ,'projects'));
     }
 
        public function index()
