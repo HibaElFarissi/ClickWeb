@@ -61,6 +61,7 @@
                                 <div class="sub-menu-column smfull">
                                     <ul>
                                        <li><a href="{{route('Project')}}">Creating Websites</a></li>
+                                        <li><a href="{{route('Marketings')}}">Marketings</a></li>
                                        <li><a href="{{route('Designs_all')}}">Designs</a></li>
                                        <li><a href="{{route('Videos_all')}}">Videos</a></li>
                                     </ul>
@@ -103,6 +104,7 @@
                         <li>
                             <a href="{{route('Project')}}">Websites</a>
                         </li>
+                          <li><a href="{{route('Marketings')}}">Marketings</a></li>
                         <li>
                             <a href="{{route('Designs_all')}}">Designs</a>
                         </li>

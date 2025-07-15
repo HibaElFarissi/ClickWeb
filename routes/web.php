@@ -26,6 +26,7 @@ use App\Http\Controllers\PricingController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ProjectsController;
+use App\Http\Controllers\MarketingController;
 use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\SkillsTypeController;
@@ -34,6 +35,7 @@ use App\Http\Controllers\CategorieVideoController;
 use App\Http\Controllers\ArticleCategoryController;
 use App\Http\Controllers\CategorieDesignController;
 use App\Http\Controllers\PricingCategoryController;
+use App\Http\Controllers\CategorieMarketingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,6 +65,7 @@ Route::get('Video_all', [VideosController::class,'Affichage'])->name('Videos_all
 Route::get('Blog', [BlogController::class,'Affichage'])->name('Blog');
 Route::get('Contact', [ContactController::class,'Affichage'])->name('Contact');
 Route::resource('projects', ProjectsController::class);
+Route::get('Marketing', [MarketingController::class,'Affichage'])->name('Marketings');
 
 Route::resource('Services', ServiceController::class);
 Route::resource('Our-Blog', BlogController::class);
@@ -93,6 +96,8 @@ Route::resource('Features', FeatureController::class);
 Route::resource('Clients', ClientController::class);
 Route::resource('Logos', LogoController::class);
 
+Route::resource('Marketings', MarketingController::class);
+Route::resource('Categorie_Marketings', CategorieMarketingController::class);
 Route::resource('Categorie_Designs', CategorieDesignController::class);
 Route::resource('Categorie_Videos', CategorieVideoController::class);
 Route::middleware('auth')->group(function () {

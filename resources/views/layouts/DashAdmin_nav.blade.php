@@ -379,19 +379,11 @@
                                 Create
                             </a>
                         </li>
-                        {{-- <li class="menu-item">
-                    <a href="{{ route('visions.index') }}" class="menu-link">
-                    Create
-                    </a>
-                </li> --}}
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">
-                                Service Vision
-                            </a>
-                        </li>
+
+
                     </ul>
 
-
+                </li>
 
                     {{-- Projects --}}
                 <li class="menu-item">
@@ -427,6 +419,33 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+                 <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle active">
+
+                        <i data-feather="monitor" class="menu-icon tf-icons"></i>
+                        <span class="title">Marketings</span>
+                    </a>
+                    <ul class="menu-sub">
+                         <li class="menu-item">
+                            <a href="{{ route('Categorie_Marketings.index') }}" class="menu-link">
+                                All Categories
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{ route('Marketings.index') }}" class="menu-link">
+                                All Marketings
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="{{ route('Marketings.create') }}" class="menu-link">
+                                Create Marketing
+                            </a>
+                        </li>
+
+
+                    </ul>
+
                 </li>
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle active">
