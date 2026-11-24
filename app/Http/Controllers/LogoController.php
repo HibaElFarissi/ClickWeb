@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Storage;
 use App\Models\Logo;
 use Illuminate\Http\Request;
 
@@ -27,28 +27,57 @@ class LogoController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        $validatedData = $request->validate([
+    // public function store(Request $request)
+    // {
+    //     $validatedData = $request->validate([
            
-            'photo' => 'nullable',
+    //         'photo' => 'nullable',
 
-        ]);
-
-
+    //     ]);
 
 
-        // Handle photo upload
-        if ($request->hasFile('photo')) {
-            $photoPath1 = $request->file('photo')->store('Logos', 'public');
-            $validatedData['photo'] = $photoPath1;
-        }
 
 
-        Logo::create($validatedData);
+    //     // Handle photo upload
+    //     if ($request->hasFile('photo')) {
+    //         $photoPath1 = $request->file('photo')->store('Logos', 'public');
+    //         $validatedData['photo'] = $photoPath1;
+    //     }
 
-        return redirect()->route('Logos.index');
+
+    //     Logo::create($validatedData);
+
+    //     return redirect()->route('Logos.index');
+    // }
+
+public function store(Request $request)
+{
+    $request->validate([
+        'logo_light' => 'required|image',
+        'logo_dark'  => 'required|image',
+    ]);
+
+    // Keep only one active logo configuration
+    $logo = Logo::first();
+
+    if (!$logo) {
+        $logo = new Logo();
     }
+
+    if ($request->hasFile('logo_light')) {
+        $logo->logo_light = $request->file('logo_light')
+            ->store('logos', 'public');
+    }
+
+    if ($request->hasFile('logo_dark')) {
+        $logo->logo_dark = $request->file('logo_dark')
+            ->store('logos', 'public');
+    }
+
+    $logo->save();
+
+    return redirect()->back()->with('success', 'Logos saved successfully!');
+}
 
     /**
      * Display the specified resource.
@@ -69,25 +98,63 @@ class LogoController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        $validatedData = $request->validate([
+    // public function update(Request $request, string $id)
+    // {
+    //     $validatedData = $request->validate([
             
-            'photo' => 'nullable',
-        ]);
+    //         'photo' => 'nullable',
+    //     ]);
 
 
-        $Logo = Logo::findOrFail($id);
+    //     $Logo = Logo::findOrFail($id);
 
-        if ($request->hasFile('photo')) {
-            $photoPath1 = $request->file('photo')->store('Logos', 'public');
-            $validatedData['photo'] = $photoPath1;
+    //     if ($request->hasFile('photo')) {
+    //         $photoPath1 = $request->file('photo')->store('Logos', 'public');
+    //         $validatedData['photo'] = $photoPath1;
+    //     }
+
+    //     $Logo->update($validatedData);
+
+    //     return to_route('Logos.index');
+    // }
+
+public function update(Request $request, $id)
+{
+    $request->validate([
+        'logo_light' => 'nullable|image',
+        'logo_dark'  => 'nullable|image',
+    ]);
+
+    $logo = Logo::findOrFail($id);
+
+    if ($request->hasFile('logo_light')) {
+
+        if ($logo->logo_light &&
+            Storage::disk('public')->exists($logo->logo_light)) {
+            Storage::disk('public')->delete($logo->logo_light);
         }
 
-        $Logo->update($validatedData);
-
-        return to_route('Logos.index');
+        $logo->logo_light = $request->file('logo_light')
+            ->store('logos', 'public');
     }
+
+    if ($request->hasFile('logo_dark')) {
+
+        if ($logo->logo_dark &&
+            Storage::disk('public')->exists($logo->logo_dark)) {
+            Storage::disk('public')->delete($logo->logo_dark);
+        }
+
+        $logo->logo_dark = $request->file('logo_dark')
+            ->store('logos', 'public');
+    }
+
+    $logo->save();
+
+    return redirect()
+        ->route('Logos.index')
+        ->with('success', 'Logos updated successfully!');
+}
 
     /**
      * Remove the specified resource from storage.

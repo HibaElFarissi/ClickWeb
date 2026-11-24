@@ -77,10 +77,24 @@ class MarketingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-      
-    }
+
+public function show(string $id)
+{
+    $Marketing = Marketing::with('categoriemarketing')
+        ->findOrFail($id);
+
+    $RelatedMarketings = Marketing::where(
+        'id', '!=', $Marketing->id
+    )
+    ->latest()
+    ->take(3)
+    ->get();
+
+    return view('Marketings.show', compact(
+        'Marketing',
+        'RelatedMarketings'
+    ));
+}
 
     /**
      * Show the form for editing the specified resource.

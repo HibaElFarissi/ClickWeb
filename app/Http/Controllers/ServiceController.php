@@ -84,8 +84,8 @@ class ServiceController extends Controller
      * Display the specified resource.
       */
 
-    public function show(string $id)
-    {
+    // public function show(string $id)
+    // {
     //   $Cvs = Cv::paginate(1);
     //     $Testimonials=Testimonial::all();
     //     $Services=Service::where('id', '!=', $id)->latest()->paginate(4);
@@ -94,7 +94,22 @@ class ServiceController extends Controller
     //     $Settings = Setting::paginate(1);
     //     $teams=team::paginate(1);
     //     return view('Services.show', compact('Service','Services','user','Testimonials',"Settings",'teams','Cvs'));
-    }
+    // }
+
+public function show(string $id)
+{
+    $Service = Service::findOrFail($id);
+
+    $RelatedServices = Service::where('id', '!=', $Service->id)
+        ->latest()
+        ->take(3)
+        ->get();
+
+    return view('Services.show', compact(
+        'Service',
+        'RelatedServices'
+    ));
+}
 
     /**
      * Show the form for editing the specified resource.

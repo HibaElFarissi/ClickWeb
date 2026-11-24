@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('logos', function (Blueprint $table) {
             $table->id();
-               $table->longText('photo')->nullable();
+              $table->longText('logo_light')->nullable();
+              $table->longText('logo_dark')->nullable();
             $table->timestamps();
         });
     }

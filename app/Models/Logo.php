@@ -10,6 +10,7 @@ class Logo extends Model
     use HasFactory;
      protected $fillable = [
         
-        'photo',
+        'logo_light',
+        'logo_dark',
     ];
 }

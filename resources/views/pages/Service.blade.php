@@ -1,6 +1,6 @@
 @extends('layouts.navbar')
 @section('content')
-    <section class="breadcrumb-areav2" data-background="{{ asset('Frontend/images/banner/6.jpg') }}">
+    <section class="breadcrumb-areav2" data-background="{{ asset('Frontend/images/banner/67.png') }}">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">

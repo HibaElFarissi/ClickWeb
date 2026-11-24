@@ -1,601 +1,692 @@
+
 @extends('layouts.navbar')
+
 @section('content')
 
-				<section class="breadcrumb-areav2" data-background="{{ asset('Frontend/images/banner/6.jpg') }}">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-7">
-								<div class="bread-titlev2">
-									<h1 class="wow fadeInUp" data-wow-delay=".2s">Need A Premium & Creative Website Designing?</h1>
-									<p class="mt20 wow fadeInUp" data-wow-delay=".4s">From Startup to Enterprise be ready and don't worry about design and user experience.</p>
-									<a href="#" class="btn-main bg-btn2 lnk mt20 wow zoomInDown" data-wow-delay=".6s">Get Quote <i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<div class="statistics-wrap bg-gradient5">
-					<div class="container">
-						<div class="row small t-ctr mt0">
-							<div class="col-lg-3 col-sm-6">
-								<div class="statistics">
-									<div class="statistics-img">
-										<img src="{{ asset('Frontend/images/icons/deal.svg') }}" alt="happy" class="img-fluid">
-									</div>
-									<div class="statnumb">
-										<span class="counter">450</span>
-										<p>Happy Clients</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-sm-6">
-								<div class="statistics">
-									<div class="statistics-img">
-										<img src="{{ asset('Frontend/images/icons/computers.svg') }}" alt="project" class="img-fluid">
-									</div>
-									<div class="statnumb counter-number">
-										<span class="counter">48</span><span>k</span>
-										<p>Projects Done</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-sm-6">
-								<div class="statistics">
-									<div class="statistics-img">
-										<img src="{{ asset('Frontend/images/icons/worker.svg') }}" alt="work" class="img-fluid">
-									</div>
-									<div class="statnumb">
-										<span class="counter">95</span><span>k</span>
-										<p>Hours Worked</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-3 col-sm-6">
-								<div class="statistics mb0">
-									<div class="statistics-img">
-										<img src="{{ asset('Frontend/images/icons/customer-service.svg') }}" alt="support" class="img-fluid">
-									</div>
-									<div class="statnumb">
-										<span class="counter">24</span><span>/</span><span class="counter">7</span>
-										<p>Support Available</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--End Hero-->
-				<!--Start About-->
-				<section class="service pad-tb">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-4">
-								<div class="image-block upset bg-shape wow fadeIn">
-									<img src="{{ asset('Frontend/images/about/square-image-1.jpg') }}" alt="image" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-8 block-1">
-								<div class="common-heading text-l pl25">
-									<span>Overview</span>
-									<h2>Creative Web Design Service</h2>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry. </p>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum is simply dummy text of the printing and typesetting industry. is simply dummy text of the printing and typesetting industry.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--End About-->
-				<!--Start Tech-->
-				<div class="techonology-used-">
-					<div class="container">
-						<ul class="h-scroll tech-icons">
-							<li><a href="#"><img src="{{ asset('Frontend/images/icons/stack-icon1.png') }}" alt="icon"></a></li>
-							<li><a href="#"><img src="{{ asset('Frontend/images/icons/stack-icon2.png') }}" alt="icon"></a></li>
-							<li><a href="#"><img src="{{ asset('Frontend/images/icons/stack-icon3.png') }}" alt="icon"></a></li>
-							<li><a href="#"><img src="{{ asset('Frontend/images/icons/stack-icon4.png') }}" alt="icon"></a></li>
-							<li><a href="#"><img src="{{ asset('Frontend/images/icons/stack-icon5.png') }}" alt="icon"></a></li>
-							<li><a href="#"><img src="{{ asset('Frontend/images/icons/stack-icon6.png') }}" alt="icon"></a></li>
-							<li><a href="#"><img src="{{ asset('Frontend/images/icons/stack-icon7.png') }}" alt="icon"></a></li>
-							<li><a href="#"><img src="{{ asset('Frontend/images/icons/stack-icon8.png') }}" alt="icon"></a></li>
-						</ul>
-					</div>
-				</div>
-				<!--End Tech-->
-				<!--Start Service-->
-				<section class="service-block bg-gradient6 pad-tb">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="common-heading ptag">
-									<span>Service</span>
-									<h2>Our Services</h2>
-									<p class="mb30">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row upset link-hover">
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".2s">
-								<div class="s-block">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/logo-and-branding.svg') }}" alt="service" class="img-fluid"/></div>
-									<h4>Graphic Designing Services</h4>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".4s">
-								<div class="s-block">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/service2.svg') }}" alt="service" class="img-fluid"/></div>
-									<h4>Responsive Web Designing</h4>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".6s">
-								<div class="s-block">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/service3.svg') }}" alt="service" class="img-fluid"/></div>
-									<h4>Static Website Designing</h4>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay=".8s">
-								<div class="s-block">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/service4.svg') }}" alt="service" class="img-fluid"/></div>
-									<h4>Dynamic Website Designing</h4>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1s">
-								<div class="s-block">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/service5.svg') }}" alt="service" class="img-fluid"/></div>
-									<h4>Psd to HTML Service</h4>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeInUp" data-wow-delay="1.2s">
-								<div class="s-block">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/service6.svg') }}" alt="service" class="img-fluid"/></div>
-									<h4>Website Redesign Service</h4>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								</div>
-							</div>
-						</div>
-						<div class="-cta-btn mt70">
-							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.3s">
-								<p>Hire a <span>Dedicated Developer</span></p>
-								<a href="#" class="btn-main bg-btn2 lnk">Hire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--End Service-->
-				<!--Start Process-->
-				<section class="service-block pad-tb light-dark">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<div class="common-heading ptag">
-									<span>Process</span>
-									<h2>Our App Development Process</h2>
-									<p>Our design process follows a proven approach. We begin with a deep understanding of your needs and create a planning template.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row upset justify-content-center mt60">
-							<div class="col-lg-4 v-center order1">
-								<div class="image-block1">
-									<img src="{{ asset('Frontend/images/process/process-1.jpg') }}" alt="Process" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-7 v-center order2">
-								<div class="ps-block">
-									<span>1</span>
-									<h3>Requirement Gathering</h3>
-									<p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row upset justify-content-center mt60">
-							<div class="col-lg-7 v-center order2">
-								<div class="ps-block">
-									<span>2</span>
-									<h3>Prototype</h3>
-									<p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
-								</div>
-							</div>
-							<div class="col-lg-4 v-center order1">
-								<div class="image-block1">
-									<img src="{{ asset('Frontend/images/process/process-2.jpg') }}" alt="Process" class="img-fluid"/>
-								</div>
-							</div>
-						</div>
-						<div class="row upset justify-content-center mt60">
-							<div class="col-lg-4 v-center order1">
-								<div class="image-block1">
-									<img src="{{ asset('Frontend/images/process/process-3.jpg') }}" alt="Process" class="img-fluid"/>
-								</div>
-							</div>
-							<div class="col-lg-7 v-center order2">
-								<div class="ps-block">
-									<span>3</span>
-									<h3>Deployment</h3>
-									<p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row upset justify-content-center mt60">
-							<div class="col-lg-7 v-center order2">
-								<div class="ps-block">
-									<span>4</span>
-									<h3>Support & Maintenance</h3>
-									<p>Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. Aliquam tristique libero at dui sodales, et placerat orci lobortis. Maecenas ipsum neque, elementum id dignissim et, imperdiet vitae mauris.</p>
-								</div>
-							</div>
-							<div class="col-lg-4 v-center order1">
-								<div class="image-block1">
-									<img src="{{ asset('Frontend/images/process/process-4.jpg') }}" alt="Process" class="img-fluid"/>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--End Process-->
-				<!--Start Why Choose-->
-				<section class="service-block pad-tb bg-gradient7">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<div class="common-heading ptag">
-									<span>We Deliver Our Best</span>
-									<h2>Why Choose Niwax</h2>
-									<p class="mb30">Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row justify-content-center">
-							<div class="col-lg-4 col-sm-6 mt30  wow fadeIn" data-wow-delay=".2s">
-								<div class="s-block wide-sblock">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/teama.svg') }}" alt="service" class="img-fluid"></div>
-									<div class="s-block-content">
-										<h4>Reliable Service. In House Team</h4>
-										<p>In vel hendrerit nisi. Vestibulum eget risus velit.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeIn" data-wow-delay=".5s">
-								<div class="s-block wide-sblock">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/link.svg') }}" alt="service" class="img-fluid"></div>
-									<div class="s-block-content">
-										<h4>Trusted by People Like You</h4>
-										<p>In vel hendrerit nisi. Vestibulum eget risus velit.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeIn" data-wow-delay=".8s">
-								<div class="s-block wide-sblock">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/tech.svg') }}" alt="service" class="img-fluid"></div>
-									<div class="s-block-content">
-										<h4>Complete Technical Competency</h4>
-										<p>In vel hendrerit nisi. Vestibulum eget risus velit.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeIn" data-wow-delay="1.1s">
-								<div class="s-block wide-sblock">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/hi.svg') }}" alt="service" class="img-fluid"></div>
-									<div class="s-block-content">
-										<h4>Friendly & Cordial in Nature</h4>
-										<p>In vel hendrerit nisi. Vestibulum eget risus velit.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeIn" data-wow-delay="1.4s">
-								<div class="s-block wide-sblock">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/badge.svg') }}" alt="service" class="img-fluid"></div>
-									<div class="s-block-content">
-										<h4>Excellent Quality Delivered on Time</h4>
-										<p>In vel hendrerit nisi. Vestibulum eget risus velit.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 col-sm-6 mt30 wow fadeIn" data-wow-delay="1.7s">
-								<div class="s-block wide-sblock">
-									<div class="s-card-icon"><img src="{{ asset('Frontend/images/icons/tin.svg') }}" alt="service" class="img-fluid"></div>
-									<div class="s-block-content">
-										<h4>Effective & Continuous Communication</h4>
-										<p>In vel hendrerit nisi. Vestibulum eget risus velit.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="-cta-btn mt70">
-							<div class="free-cta-title v-center wow zoomInDown" data-wow-delay="1.8s">
-								<p>Let's Start a <span>New Project</span> Together</p>
-								<a href="#" class="btn-main bg-btn2 lnk">Inquire Now<i class="fas fa-chevron-right fa-icon"></i><span class="circle"></span></a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--End Why Choose-->
-				<!--Start Pricing-->
-				<section class="block-a1 pad-tb">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<div class="common-heading ptag">
-									<span>Pricing</span>
-									<h2>Pricing Table</h2>
-									<p class="mb0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row justify-content-center">
-							<div class="col-lg-4 col-md-6">
-								<div class="pricing-table mt60">
-									<div class="inner-table">
-										<img src="{{ asset('Frontend/images/icons/plan-1.svg') }}" alt="Personal"/>
-										<span class="title">Personal</span>
-										<p class="title-sub">Great For Small Business</p>
-										<h2><sup>$</sup> 79.99</h2>
-										<p class="duration">Monthly Package</p>
-										<div class="details">
-											<ul>
-												<li>Social Media Marketing</li>
-												<li>2.100 Keywords</li>
-												<li>One Way Link Building</li>
-												<li>5 Free Optimization</li>
-												<li>3 Press Releases</li>
-											</ul>
-										</div>
-									</div>
-									<a href="#" class="btn-main bg-btn lnk">Get Started <i class="fas fa-chevron-right fa-icon"></i> <span class="circle"></span></a>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6">
-								<div class="pricing-table best-plan mt60 bg-gradient4">
-									<div class="inner-table">
-										<img src="{{ asset('Frontend/images/icons/plan-2.svg') }}" alt="Advance"/>
-										<span class="title">Advance</span>
-										<p class="title-sub">Great For Small Business</p>
-										<h2><sup>$</sup> 79.99</h2>
-										<p class="duration">Monthly Package</p>
-										<div class="details">
-											<ul>
-												<li>Social Media Marketing</li>
-												<li>2.100 Keywords</li>
-												<li>One Way Link Building</li>
-												<li>5 Free Optimization</li>
-												<li>3 Press Releases</li>
-											</ul>
-										</div>
-									</div>
-									<a href="#" class="btn-main bg-btn3 lnk">Get Started <i class="fas fa-chevron-right fa-icon"></i> <span class="circle"></span></a>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6">
-								<div class="pricing-table mt60">
-									<div class="inner-table">
-										<img src="{{ asset('Frontend/images/icons/plan-3.svg') }}" alt="Ultimate"/>
-										<span class="title">Ultimate</span>
-										<p class="title-sub">Great For Small Business</p>
-										<h2><sup>$</sup> 79.99</h2>
-										<p class="duration">Monthly Package</p>
-										<div class="details">
-											<ul>
-												<li>Social Media Marketing</li>
-												<li>2.100 Keywords</li>
-												<li>One Way Link Building</li>
-												<li>5 Free Optimization</li>
-												<li>3 Press Releases</li>
-											</ul>
-										</div>
-									</div>
-									<a href="#" class="btn-main bg-btn lnk">Get Started <i class="fas fa-chevron-right fa-icon"></i> <span class="circle"></span></a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--End Pricing-->
-				<!--Stat Projects-->
-				<section class="featured-project pad-tb">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-6">
-								<div class="common-heading ptag">
-									<span>Our Projects</span>
-									<h2>Some of Our Works</h2>
-									<p class="mb0">We think big and have hands in all leading technology platforms to provide you wide array of services.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-4 wow fadeInUp" data-wow-delay=".2s">
-								<div class="isotope_item hover-scale">
-									<div class="item-image">
-										<a href="#"><img src="{{ asset('Frontend/images/portfolio/image-1.jpg') }}" alt="portfolio" class="img-fluid"/> </a>
-									</div>
-									<div class="item-info">
-										<h4><a href="#">Creative </a></h4>
-										<p>ios, design</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 wow fadeInUp" data-wow-delay=".4s">
-								<div class="isotope_item hover-scale">
-									<div class="item-image">
-										<a href="#"><img src="{{ asset('Frontend/images/portfolio/image-2.jpg') }}" alt="portfolio" class="img-fluid"/> </a>
-									</div>
-									<div class="item-info">
-										<h4><a href="#">Brochure Design</a></h4>
-										<p>Graphic, Print</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 wow fadeInUp" data-wow-delay=".6s">
-								<div class="isotope_item hover-scale">
-									<div class="item-image">
-										<a href="#"><img src="{{ asset('Frontend/images/portfolio/image-3.jpg') }}" alt="portfolio" class="img-fluid"/> </a>
-									</div>
-									<div class="item-info">
-										<h4><a href="#">Ecommerce Development</a></h4>
-										<p>Web application</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 wow fadeInUp" data-wow-delay=".8s">
-								<div class="isotope_item hover-scale">
-									<div class="item-image">
-										<a href="#"><img src="{{ asset('Frontend/images/portfolio/image-4.jpg') }}" alt="portfolio" class="img-fluid"/> </a>
-									</div>
-									<div class="item-info">
-										<h4><a href="#">Icon Pack</a></h4>
-										<p>Android & iOs, Design</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 wow fadeInUp" data-wow-delay="1s">
-								<div class="isotope_item hover-scale">
-									<div class="item-image">
-										<a href="#"><img src="{{ asset('Frontend/images/portfolio/image-5.jpg') }}" alt="portfolio" class="img-fluid"/> </a>
-									</div>
-									<div class="item-info">
-										<h4><a href="#">Smart Watch</a></h4>
-										<p>UI/UX Design</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-4 wow fadeInUp" data-wow-delay="1.2s">
-								<div class="isotope_item hover-scale">
-									<div class="item-image">
-										<a href="#"><img src="{{ asset('Frontend/images/portfolio/image-6.jpg') }}" alt="portfolio" class="img-fluid"/> </a>
-									</div>
-									<div class="item-info">
-										<h4><a href="#">Brochure Design</a></h4>
-										<p>Graphic, Print</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12 maga-btn mt60">
-								<a href="javascript:void(0)" class="btn-outline">View More Projects <i class="fas fa-chevron-right fa-icon"></i></a>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--End Projects-->
-				<!--Start reveiws-->
-				<section class="reviews-block bg-gradient5 pad-tb">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<div class="common-heading ptag">
-									<span>Service Testimonials</span>
-									<h2>Client Speaks</h2>
-									<p class="mb30">Check our customers success stories.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-4 mt30">
-								<div class="reviews-card pr-shadow">
-									<div class="row v-center">
-										<div class="col"> <span class="revbx-lr"><i class="fas fa-quote-left"></i></span> </div>
-										<div class="col"> <span class="revbx-rl"><img src="{{ asset('Frontend/images/client/envato.png') }}" alt="review service logo"></span> </div>
-									</div>
-									<div class="review-text">
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-									</div>
-									<div class="-client-details-">
-										<div class="reviewer-text">
-											<h4>Sue Vaneer</h4>
-											<p>Business Owner, <small>Jaipur</small></p>
-											<div class="star-rate">
-												<ul>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" ><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 mt30">
-								<div class="reviews-card pr-shadow">
-									<div class="row v-center">
-										<div class="col"> <span class="revbx-lr"><i class="fas fa-quote-left"></i></span> </div>
-										<div class="col"> <span class="revbx-rl"><img src="{{ asset('Frontend/images/client/envato.png') }}" alt="review service logo"></span> </div>
-									</div>
-									<div class="review-text">
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-									</div>
-									<div class="-client-details-">
-										<div class="reviewer-text">
-											<h4>Don Stairs</h4>
-											<p>Business Owner, <small>Jaipur</small></p>
-											<div class="star-rate">
-												<ul>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" ><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-4 mt30">
-								<div class="reviews-card pr-shadow">
-									<div class="row v-center">
-										<div class="col"> <span class="revbx-lr"><i class="fas fa-quote-left"></i></span> </div>
-										<div class="col"> <span class="revbx-rl"><img src="{{ asset('Frontend/images/client/envato.png') }}" alt="review service logo"></span> </div>
-									</div>
-									<div class="review-text">
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-									</div>
-									<div class="-client-details-">
-										<div class="reviewer-text">
-											<h4>Russ L. Rogers</h4>
-											<p>Business Owner, <small>Jaipur</small></p>
-											<div class="star-rate">
-												<ul>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" class="chked"><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-													<li> <a href="javascript:void(0)" ><i class="fas fa-star" aria-hidden="true"></i></a> </li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!--End reviews-->
-				<!--Start CTA-->
-				<section class="cta-area pad-tb">
-					<div class="container">
-						<div class="row justify-content-center">
-							<div class="col-lg-8">
-								<div class="common-heading">
-									<span>Let's work together</span>
-									<h2>We Love to Listen to Your Requirements</h2>
-									<a href="javascript:void(0)" class="btn-outline">Estimate Project <i class="fas fa-chevron-right fa-icon"></i></a>
-									<p class="cta-call">Or call us now <a href="tel:+1234567890"><i class="fas fa-phone-alt"></i> (123) 456 7890</a></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="shape shape-a1"><img src="{{ asset('Frontend/images/shape/shape-3.svg') }}" alt="shape"/></div>
-					<div class="shape shape-a2"><img src="{{ asset('Frontend/images/shape/shape-4.svg') }}" alt="shape"/></div>
-					<div class="shape shape-a3"><img src="{{ asset('Frontend/images/shape/shape-13.svg') }}" alt="shape"/></div>
-					<div class="shape shape-a4"><img src="{{ asset('Frontend/images/shape/shape-11.svg') }}" alt="shape"/></div>
-				</section>
-				<!--End CTA-->
+@php
+    $servicePhoto = $Service->photo
+        ? asset('storage/' . $Service->photo)
+        : null;
+
+    $serviceIcon = $Service->icon
+        ? asset('storage/' . $Service->icon)
+        : null;
+@endphp
+
+<style>
+/* =================================
+   SERVICE HERO
+================================= */
+
+.service-detail-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 125px 0 85px;
+    background:
+        radial-gradient(circle at 85% 25%, rgba(111,76,255,.14), transparent 28%),
+        linear-gradient(120deg,#fbfaff,#f0f2ff,#f8f7ff);
+}
+
+.service-detail-hero:before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    right: -160px;
+    top: -250px;
+    border: 1px solid rgba(105,75,255,.13);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 45px rgba(105,75,255,.025),
+        0 0 0 90px rgba(105,75,255,.02);
+    pointer-events: none;
+}
+
+.service-breadcrumb {
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+    padding: 12px 20px;
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 50px;
+    background: rgba(255,255,255,.75);
+    color: #707891;
+    font-size: 14px;
+    box-shadow: 0 10px 35px rgba(60,55,130,.06);
+}
+
+.service-breadcrumb a {
+    color: #6246ed;
+    text-decoration: none;
+}
+
+.service-breadcrumb .current {
+    color: #172044;
+}
+
+.service-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    color: #6246ed;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.service-eyebrow:before {
+    content: "";
+    width: 42px;
+    height: 3px;
+    border-radius: 5px;
+    background: #6246ed;
+}
+
+.service-detail-title {
+    max-width: 850px;
+    margin-bottom: 20px;
+    color: #090e45;
+    font-size: clamp(38px,5vw,66px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    overflow-wrap: anywhere;
+}
+
+.service-detail-lead {
+    max-width: 760px;
+    color: #65708b;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* HERO IMAGE */
+
+.service-hero-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid #e8e3ff;
+    border-radius: 42px;
+    background: rgba(255,255,255,.8);
+    box-shadow: 0 25px 65px rgba(81,65,190,.13);
+    transform: rotate(-5deg);
+}
+
+.service-hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* =================================
+   SERVICE CONTENT
+================================= */
+
+.service-detail-content {
+    padding: 85px 0;
+    background: #fff;
+}
+
+.service-detail-image {
+    display: block;
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 18px 50px rgba(20,20,60,.10);
+}
+
+.service-section-heading {
+    margin-bottom: 22px;
+}
+
+.service-section-heading span {
+    color: #6748ed;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.service-section-heading h2 {
+    margin-top: 8px;
+    color: #101642;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.service-rich-text {
+    color: #68718a;
+    font-size: 16px;
+    line-height: 1.95;
+    overflow-wrap: anywhere;
+}
+
+/* INFORMATION CARD */
+
+.service-info-card {
+    padding: 28px;
+    border: 1px solid #eeedf8;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 38px rgba(28,24,85,.06);
+}
+
+.service-info-card h3 {
+    margin-bottom: 18px;
+    color: #101642;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.service-info-row {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0eff7;
+}
+
+.service-info-row:last-child {
+    border-bottom: 0;
+}
+
+.service-info-row small {
+    display: block;
+    margin-bottom: 5px;
+    color: #9296a8;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.service-info-row strong {
+    color: #252a50;
+    overflow-wrap: anywhere;
+}
+
+/* CTA */
+
+.service-cta {
+    padding: 32px;
+    border-radius: 18px;
+    background: linear-gradient(110deg,#704cff,#4c35d7);
+    color: white;
+    box-shadow: 0 18px 40px rgba(91,65,220,.18);
+}
+
+.service-cta h3 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.service-cta p {
+    color: rgba(255,255,255,.85);
+    line-height: 1.7;
+}
+
+.service-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 13px 22px;
+    border-radius: 9px;
+    background: white;
+    color: #5439dc !important;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* =================================
+   RELATED SERVICES
+================================= */
+
+.related-services-section {
+    padding: 80px 0;
+    background: #f8f8fc;
+}
+
+.related-service-card {
+    height: 100%;
+    padding: 28px;
+    border: 1px solid #efedf7;
+    border-radius: 17px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(20,20,60,.05);
+    transition: .3s ease;
+}
+
+.related-service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 38px rgba(20,20,60,.10);
+}
+
+.related-service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    border-radius: 17px;
+    background: #f2efff;
+}
+
+.related-service-icon img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.related-service-card h3 {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.related-service-card h3 a {
+    color: #151a43;
+    text-decoration: none;
+}
+
+.related-service-card p {
+    color: #788098;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.related-service-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #6246ed;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* =================================
+   DARK MODE
+================================= */
+
+body.active-dark .service-detail-hero {
+    background:
+        radial-gradient(circle at 85% 25%,rgba(111,76,255,.18),transparent 28%),
+        linear-gradient(120deg,#101010,#151515,#181818);
+}
+
+body.active-dark .service-breadcrumb {
+    border-color: #292929;
+    background: #202020;
+    color: #aaa;
+}
+
+body.active-dark .service-breadcrumb .current {
+    color: #eee;
+}
+
+body.active-dark .service-breadcrumb a,
+body.active-dark .service-eyebrow {
+    color: #aa98ff;
+}
+
+body.active-dark .service-detail-title {
+    color: #f0efff;
+}
+
+body.active-dark .service-detail-lead {
+    color: #aaa;
+}
+
+body.active-dark .service-hero-visual {
+    border-color: #343044;
+    background: #202026;
+    box-shadow: 0 25px 65px rgba(0,0,0,.35);
+}
+
+body.active-dark .service-detail-content {
+    background: #101010;
+}
+
+body.active-dark .service-section-heading h2 {
+    color: #e6e6e6;
+}
+
+body.active-dark .service-section-heading span {
+    color: #aa98ff;
+}
+
+body.active-dark .service-rich-text {
+    color: #aaa;
+}
+
+body.active-dark .service-info-card,
+body.active-dark .related-service-card {
+    border-color: #292929;
+    background: #1b1b1b;
+    box-shadow: 0 12px 38px rgba(0,0,0,.22);
+}
+
+body.active-dark .service-info-card h3,
+body.active-dark .service-info-row strong,
+body.active-dark .related-service-card h3 a {
+    color: #e6e6e6;
+}
+
+body.active-dark .service-info-row {
+    border-color: #292929;
+}
+
+body.active-dark .service-info-row small,
+body.active-dark .related-service-card p {
+    color: #aaa;
+}
+
+body.active-dark .related-services-section {
+    background: #151515;
+}
+
+body.active-dark .related-service-icon {
+    background: #29223d;
+}
+
+body.active-dark .related-service-link {
+    color: #aa98ff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:767px) {
+    .service-detail-hero {
+        padding: 105px 0 65px;
+    }
+
+    .service-breadcrumb {
+        gap: 7px;
+        margin-bottom: 35px;
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .service-detail-content {
+        padding: 55px 0;
+    }
+
+    .service-detail-lead {
+        font-size: 16px;
+    }
+
+    .service-section-heading h2 {
+        font-size: 26px;
+    }
+
+    .service-hero-visual {
+        width: 140px;
+        height: 140px;
+        padding: 25px;
+    }
+
+    .service-cta {
+        padding: 25px;
+    }
+}
+</style>
+
+
+{{-- =================================
+     HERO SECTION
+================================= --}}
+
+<section class="service-detail-hero">
+    <div class="container">
+
+        <nav class="service-breadcrumb">
+            <a href="{{ url('/') }}">
+                <i class="fas fa-home"></i> Home
+            </a>
+
+            <span>/</span>
+
+            <a href="{{ route('Services.index') }}">
+                Services
+            </a>
+
+            <span>/</span>
+
+            <span class="current">
+                {{ $Service->title }}
+            </span>
+        </nav>
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+
+                <div class="service-eyebrow">
+                    {{ $Service->title_Golobale ?: 'Our Services' }}
+                </div>
+
+                <h1 class="service-detail-title">
+                    {{ $Service->title }}
+                </h1>
+
+                @if($Service->description)
+                    <p class="service-detail-lead">
+                        {{ \Illuminate\Support\Str::limit(strip_tags($Service->description), 220) }}
+                    </p>
+                @endif
+
+            </div>
+
+            <div class="col-lg-4 d-none d-lg-block">
+
+                @if($serviceIcon)
+                    <div class="service-hero-visual">
+                        <img src="{{ $serviceIcon }}"
+                             alt="{{ $Service->title }}">
+                    </div>
+                @else
+                    <div class="service-hero-visual">
+                        <i class="fas fa-layer-group"
+                           style="font-size:65px;color:#6748ed"></i>
+                    </div>
+                @endif
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+{{-- =================================
+     SERVICE DETAILS
+================================= --}}
+
+<section class="service-detail-content">
+    <div class="container">
+
+        <div class="row align-items-start">
+
+            <div class="col-lg-7">
+
+                @if($servicePhoto)
+                    <img
+                        src="{{ $servicePhoto }}"
+                        alt="{{ $Service->title }}"
+                        class="service-detail-image"
+                    >
+                @endif
+
+                <div class="mt-5">
+
+                    <div class="service-section-heading">
+                        <span>Service Overview</span>
+
+                        <h2>
+                            {{ $Service->title_Golobale ?: $Service->title }}
+                        </h2>
+                    </div>
+
+                    @if($Service->description)
+                        <div class="service-rich-text">
+                            {!! nl2br(e($Service->description)) !!}
+                        </div>
+                    @endif
+
+                    @if($Service->text)
+                        <div class="service-rich-text mt-4">
+                            {!! nl2br(e($Service->text)) !!}
+                        </div>
+                    @endif
+
+                </div>
+
+            </div>
+
+
+            {{-- SERVICE SIDEBAR --}}
+
+            <aside class="col-lg-5">
+
+                <div class="service-info-card">
+
+                    <h3>Service Information</h3>
+
+                    <div class="service-info-row">
+                        <small>Service Name</small>
+                        <strong>{{ $Service->title }}</strong>
+                    </div>
+
+                    @if($Service->title_Golobale)
+                        <div class="service-info-row">
+                            <small>Category</small>
+                            <strong>{{ $Service->title_Golobale }}</strong>
+                        </div>
+                    @endif
+
+                    @if($Service->slug)
+                        <div class="service-info-row">
+                            <small>Reference</small>
+                            <strong>{{ $Service->slug }}</strong>
+                        </div>
+                    @endif
+
+                </div>
+
+
+                {{-- CONTACT CTA --}}
+
+                <div class="service-cta mt-4">
+
+                    <h3>Have a Project in Mind?</h3>
+
+                    <p>
+                        Let's discuss your idea and find the best solution
+                        for your business.
+                    </p>
+
+                    <a href="{{ url('/Contact') }}">
+                        Request a Quote
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+</section>
+
+
+{{-- =================================
+     RELATED SERVICES
+================================= --}}
+
+@if(isset($RelatedServices) && $RelatedServices->isNotEmpty())
+
+<section class="related-services-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-7 text-center">
+
+                <div class="service-section-heading">
+                    <span>Explore More</span>
+                    <h2>Other Services</h2>
+                    <p class="text-muted">
+                        Discover more solutions for your business.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            @foreach($RelatedServices as $relatedService)
+
+                <div class="col-lg-4 col-md-6 mb-4">
+
+                    <article class="related-service-card">
+
+                        <div class="related-service-icon">
+
+                            @if($relatedService->icon)
+                                <img
+                                    src="{{ asset('storage/' . $relatedService->icon) }}"
+                                    alt="{{ $relatedService->title }}"
+                                    loading="lazy"
+                                >
+                            @else
+                                <i class="fas fa-layer-group"
+                                   style="font-size:25px;color:#6748ed"></i>
+                            @endif
+
+                        </div>
+
+                        <h3>
+                            <a href="{{ route('Services.show', $relatedService->id) }}">
+                                {{ $relatedService->title }}
+                            </a>
+                        </h3>
+
+                        <p>
+                            {{ \Illuminate\Support\Str::limit(strip_tags($relatedService->description), 120) }}
+                        </p>
+
+                        <a class="related-service-link"
+                           href="{{ route('Services.show', $relatedService->id) }}">
+
+                            View Details
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </article>
+
+                </div>
+
+            @endforeach
+
+        </div>
+
+    </div>
+
+</section>
+
+@endif
+
 @endsection
